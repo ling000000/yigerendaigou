@@ -1,0 +1,13 @@
+{% block content %}
+{{registAdd}}
+<br>
+================
+<br>
+{% if username %}
+注册失败{{ username }}已存在
+<a href="{% url 'q:do_reg' %}">注册</a>
+{% else %}
+注册成功！
+<a href="{% url 'q:login' %}">登陆</a>
+{% endif %}
+{% endblock %}

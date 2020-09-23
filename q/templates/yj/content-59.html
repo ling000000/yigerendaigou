@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0025)http://www.yoybuy.com/cn/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="language" content="ch">
+    <meta http-equiv="language" content="ch">
+    <link rel="shortcut icon" href="/static/templets/aigou/images/favicon.ico" type="image/x-icon">
+    <title>测量帮助 </title>
+    <meta name="description" content="">
+    <link href="/static/templets/aigou/css/user.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/static/templets/aigou/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/analytics.js"></script>
+    <script src="/static/templets/aigou/js/bat.js"></script>
+    <script src="/static/templets/aigou/js/analytics.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/jquery.roundabout-1.0.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/livechat.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/headnew.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/roundtrip.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/getproduct.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <link href="/static/templets/aigou/css/main.min.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/default.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/cnindexnew.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"  src="/static/templets/aigou/js/headnew.js"></script>
+        	<script type="text/javascript">
+
+        	    $(function () {
+        	        var langobj = getCookie('lang');
+        	        var lang = "ch";
+        	        if (langobj != null) {
+        	            lang = langobj.substr(2, 2);
+        	            if (lang == "en") {
+        	                $(".lang").val("en");
+        	            }
+        	            else {
+        	                $(".lang").val("ch");
+        	            }
+
+        	        }
+        	        else {
+        	            $(".lang").val("ch");
+        	            lang = "ch";
+        	        }
+        	        $(".lang").click(function () {
+        	            var lst = "ch";
+        	            if ($(".lang").text() == "English") {
+        	                lst = "en";
+        	                $(".lang").text("中文");
+        	            }
+        	            $.ajax({
+        	                type: "POST",
+        	                url: "/Tools/jsonregister.ashx?action=lang",
+        	                data: "lstr=" + lst,
+        	                success: function (msg) {
+        	                    location.reload();
+        	                }
+        	            });
+
+        	        });
+
+
+        	    });
+
+        	    function getCookie(name)//取cookies函数
+        	    {
+        	        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+
+        	        if (arr != null) return unescape(arr[2]); return null;
+
+        	    }
+
+</script>
+
+
+
+
+    <header class="">
+         <div class="shortcut" style="z-index:400; background-color:#f8f8f8;" >
+             <div class="w top_nav">
+                 <ul class="fl login">
+
+               <!-- <li><span style="margin-right:30px; cursor:pointer;" class="lang" >English</span></li>-->
+
+                 <li  style="margin-right:20px;">CNY : MRY = &nbsp;<b style="color:#f47a20;">1 : 1.58</b></li>
+                 <li  style="margin-right:20px;">CNY : SGD = &nbsp;<b style="color:#f47a20;">1 : 4.6</b></li>
+                 </ul>
+                 <ul class="fr">
+
+
+{% if not u %}
+                         <li><span class="login_t"><a href="userindexs.html" > {{ user.username }}</a>&nbsp;&nbsp;|</span>
+                             <a href="{% url 'q:logout' %}" >退出</a>&nbsp;&nbsp;|</li>
+                     {% else %}
+                         <li><a href="{% url 'q:login' %}" style="font-size:12px;">登录&nbsp;&nbsp;|</a></li>
+                         <li><a href="{% url 'q:do_reg' %}" style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;注册&nbsp;&nbsp;|</a></li>
+                     {% endif %}
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:daicai' %}" target="_blank" rel="nofollow"><i class=" icon_shop"></i>购物车<em class="top_red ShoppingNum"></em></a>&nbsp;&nbsp;|</li>
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:userindex' %}" rel="nofollow"><i class=" icon_u"></i>用户中心</a></li>
+                    <!-- <li class="fore"><a href="addzyorder.html" id="shoppingCart" rel="nofollow"><i class="icon_m icon_my"></i><span><em>我的仓库</em><em class="none gerenc">&nbsp;&nbsp;&nbsp;&nbsp;</em></span><em class="top_red OrderNum"></em></a></li>-->
+
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+
+         <div class="w por header-logo" style="height: 120px;"  >
+             <style>
+             .kefu{float:right;margin-top: 15px;margin-right: 20px;}
+             .kefu ul li{ float:left;}
+             </style>
+
+                <div class="logo-wrap logo" align="center">
+                        <a  href="{% url 'q:index' %}"><font size="6" color="#6495ed">新领域国际物流</font></a>
+                 </div>
+
+
+
+             <div class="search-wrap search" style="margin-top:30px;">
+                 <form action="{% url 'q:addurl' %}" method="post" name="addurl">
+                     {% csrf_token %}
+                     <input type="text" id="Text1" class="fl search_text head-search-text" style="width:448px;padding-left:2px;" name="goods_url" autofocus="true" placeholder="请输入商品的关键词或商品的链接" value="{{ article.goods_url }}"/>
+                     <span class="fl button " onclick="addurl.submit()" id="headSearch"><span class="search-val-text" >代购</span></span>
+                 </form>
+
+                 <span class="fl" style="margin-left: 50px;margin-top: -5px;">
+
+                     <div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1493651104050">
+                     </div>
+                     <script>    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                 </span>
+
+             </div>
+             <div class="cb"></div>
+             <div class="kefu">
+
+               </div>
+         </div>
+
+            <div class="shortcut" id="nav_list" style="height:54px;">
+             <div class="w">
+                 <ul class="nav clearfix">
+                     <li class="on" ><a href="{% url 'q:index' %}" class="nav_l" style="height:54px; margin-bottom:2px; margin-top:-1px; margin-left:-1px; ">首页</a></li>
+                     <!--<li class="zhidemai" ><a href="golist-650-0.html" class="nav_l">热门商品</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-80' %}" class="nav_l">关于我们</a>
+                    <ul>
+      <li><a href="{% url 'q:content-68' %}">新用户注册</a></li>
+      <li><a href="{% url 'q:content-73' %}">赔偿标准</a></li>
+      <li><a href="{% url 'q:content-65' %}">服务条款</a></li>
+      </ul>
+                     </li>
+                      <li class="zhidemai" ><a href="{% url 'q:addurl' %}" class="nav_l">代购</a>
+                        <!-- <ul>
+      <li><a href="/content-68.html">新用户注册</a></li>-->
+     <!-- <li><a href="/content-25.html">承运条款</a></li>-->
+
+      <!--</ul>-->
+                      </li>
+{#                     <li class="zhidemai" ><a href="http://www.kuaidi100.com/?from=openv" class="nav_l">物流跟踪</a>#}
+{#                     <ul>#}
+{#                     <li><a href="#">包裹查询</a></li>#}
+{#      <li><a href="#">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+{#       </ul>#}
+{#                     </li>#}
+                                          <li class="zhidemai" ><a href="#" class="nav_l">物流跟踪</a>
+                     <ul>
+                     <li><a href="{% url 'q:packagesearch' %}">包裹查询</a></li>
+{#      <li><a href="#">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+       </ul>
+                     </li>
+
+                     <li class="zhidemai" ><a href="{% url 'q:content-85' %}" class="nav_l">空运服务</a>
+
+       <!--              <ul>
+      <li><a href="/content-5.html"">空运费用</a></li>
+      <li><a href="/content-4.html">空运计费重量</a></li>
+      <li><a href="/content-22.html">不能承运货件</a></li>
+      <li><a href="/content-25.html">承运条款</a></li>
+
+      </ul>   -->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-86' %}" class="nav_l" >海运服务</a>
+                     <!-- <ul>
+            <li><a href="content-32.html">海运服务说明</a></li>
+        </ul>-->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-87' %}" class="nav_l">支付方式</a>
+
+                     <!--<ul>
+      <li><a href="/content-47.html"">支付宝支付</a></li>
+      <li><a href="/content-48.html">中国银行汇款</a></li>
+      </ul>-->
+                     </li>
+                    <!-- <li class="zhidemai" ><a href="/content-80.html" class="nav_l">常见问题</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-53' %}" class="nav_l">联系我们</a></li>
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+</header>
+        <style>#guzz{ display:none; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:#ccc; z-index:100;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
+#guzz img{ position:fixed; top:40%; left:0; right:0; bottom:auto; margin:0 auto; }
+.spinner {
+  margin: 100px auto;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+ 
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+ 
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+ 
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+ 
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+ 
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+ 
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+ 
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+ 
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+ 
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+ 
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+ 
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+ 
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+</style>
+
+<div id="guzz">
+<!--<img src="/templets/aigou/images/jjz.gif" />-->
+<div style=" position:absolute; top:30%; left:0; right:0; bottom:auto;">
+<div class="spinner">
+  <div class="spinner-container container1">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container2">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container3">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".search_but").click(function () {
+            var val = $(this).prev().val();
+            if (val != '') {
+                $("#guzz").show();
+                sendgoods();
+            }
+        })
+
+    });
+    function sendgoods() {
+        if ($("#_searchURL").val() != "") {
+            $("#guzz").show();
+            $("#searchURL").submit();
+        }
+    }
+
+    function sendgoods2() {
+        if ($("#_hidesearchURL").val() != "") {
+            $("#guzz").show();
+            $("#hidesearchURL").submit();
+        }
+    }
+
+</script>
+
+
+        
+
+        <div id="container" style="background-color:#fff;">
+            <div id="content">
+                <div class="top_nav" id="top_nav"><a href="{% url 'q:index' %}">首页</a>&gt;<span>  测量帮助 </span></div>
+
+                <h2 class="tit_global"><span>测量帮助</span></h2>
+                <div class="faq_content">
+                    <p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">如果您在网上购买的衣服尺寸不对，感觉很烦恼吧？因为每个人的体型都是不同的；不同品牌的衣服，尺寸标准也不同。所以，很多人在选择衣服的时候都担心尺寸是否合适或者希望知道如何才能买到尺寸合适的衣服。那么，我们应该如何避免买到不合体的衣服呢？以下是一些正确测量衣服尺寸的建议，或许可以让您的网上购物享受更多乐趣。</span></span></p>
+<p>
+ &nbsp;</p>
+<p>
+ <span style="font-size: 20px"><strong>测量尺寸时请使用柔软的测量尺</strong></span></p>
+<p>
+ &nbsp;</p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">网购衣服时，手头备一根塑料测量尺会非常方便。您得量得精确的胸围，腰围和臀围等尺寸。测量时请不要将量尺拉得太紧。注意量尺应与地面平行。</span></span></p>
+<p>
+ &nbsp;</p>
+<p>
+ &nbsp;</p>
+<p>
+ <span style="font-size: 20px"></span></p>
+<p>
+ &nbsp;</p>
+<p>
+ &nbsp;</p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体"><strong>1. 肩宽</strong></span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">放松直立，量尺从一侧肩胛骨末端（胳膊顶端）经由上背部量到另一侧肩胛骨末端（胳膊顶端）。</span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体"><strong>2. 胸围</strong></span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">放松直立，量尺于胳膊下方绕一圈测量您胸部最丰满的部分。（如果您是女士，测量时要穿内衣才能保证尺寸精确。）</span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体"><strong>3. 腰围</strong></span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">放松直立并呼气，测量自然腰线处，即您肚脐附近最窄的部分。</span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体"><strong>4. 臀围</strong></span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">双脚开立，用量尺围绕您臀部最丰满处测量一圈。</span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体"><strong>5. 臂长</strong></span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">将您的一只胳膊放置身体一侧，将量尺一端置于您的颈部，顺着您的肩膀量至手腕处。</span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">量得正确尺寸后，您仍需注意一件事情。即您购买的衣服是紧身的还是宽松的，较普通衣服大些还是小些。您需要根据衣服的款式，面料或产品描述对尺寸做调整。另外，其他买家的一些评论和建议也很重要。（温馨提示：中国的尺寸较国际尺寸小些。）</span></span></p>
+<p>
+ <span style="font-size: 14px"><span style="font-family: 宋体">如果您仍然不太确定衣服的尺寸，您可以将您的尺寸：身高，体重，胸围，臀围等尺寸告知我们的客服寻求帮助。我们将会帮您和卖家进行沟通交流。您可以参考卖家的建议做最后决定。</span></span></p>
+<p>
+ &nbsp;</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+			
+			<!-- 返回顶部 -->
+		</div>
+
+
+		<!-- footer -->
+		
+        <div class="shortcut footer" style="margin-top:13px; background-color:#f8f8f8;">
+        <div class="w" >
+            <div class="service_l" >
+            
+               <ul class="foot_tool">
+
+
+					<li>
+
+    						<p><strong>新手指南</strong></p>
+                        						<p><a href="{% url 'q:content-68' %}">新用户注册</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-80' %}">关于我们</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>付款方式</strong></p>
+
+                        						<p><a href="{% url 'q:content-49' %}">国际信用卡</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-71' %}">支付宝付款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-74' %}">微信支付</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-87' %}">支付方式</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>配送相关</strong></p>
+
+                        						<p><a href="{% url 'q:content-51' %}">物流运费</a>
+						</p>
+
+
+                        						<p><a href={% url 'q:content-56' %}>海关及税项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-75' %}">重量计算法</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-77' %}">什么是敏感货</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-79' %}">大货商品</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-85' %}">空运服务</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-86' %}">海运服务</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>售后服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-54' %}">代购退换货政策</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-72' %}">收货注意事项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-73' %}">赔偿标准</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-78' %}">投诉意见箱</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>其他服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-57' %}">商品估重</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-58' %}">尺码换算</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-59' %}">测量帮助</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-65' %}">服务条款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-70' %}">邮政编码查询</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-88' %}">服务标准协议</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-89' %}">存仓有效期</a>
+						</p>
+
+
+</li>
+</ul>
+
+                <div class="fr two_code">
+                    
+                </div>
+                <div class="fr two_code code_margin">
+                    
+                </div>
+                <div class="cb">
+                </div>
+            </div>
+            <div class="footer_nav">
+                
+                <div class="cb">
+                </div>
+            </div>
+           
+               
+
+          
+      <!--      <div class="links">
+                
+            </div>
+            <p class="ft_panli_about">
+               </p>-->
+        </div>
+        <div class="foot2">
+   <div class="foot2_1">
+     <!--<p>总部地址：广州市白云区石井镇石沙路珠岗路第二工业区自编88号（pop仓），联系人：严先生 13128696556</p>-->
+     <p>网站地址:&nbsp;&nbsp;<a href="index.html" target="_blank" style=" color:White;">http://www.yjexpress.com.cn</a>&nbsp;&nbsp;&nbsp;&nbsp;云际货运</p>
+     <p>Copyright © 2010-2011 粤ICP备10005804号-1 All rights reserved</p>
+  </div>
+</div>
+    </div>
+
+      
+<!--代码部分begin-->
+<script>
+    $(function () {
+        $("#aFloatTools_Show").click(function () {
+            $('#divFloatToolsView').animate({ width: 'show', opacity: 'show' }, 100, function () { $('#divFloatToolsView').show(); });
+            $('#aFloatTools_Show').hide();
+            $('#aFloatTools_Hide').show();
+        });
+        $("#aFloatTools_Hide").click(function () {
+            $('#divFloatToolsView').animate({ width: 'hide', opacity: 'hide' }, 100, function () { $('#divFloatToolsView').hide(); });
+            $('#aFloatTools_Show').show();
+            $('#aFloatTools_Hide').hide();
+        });
+    });
+</script>
+<!--代码部分end-->
+<script src="templets/aigou/artdialog/artDialog-skin=blue.js"></script>
+<script src="templets/aigou/artdialog/plugins/iframeTools-skin=blue.js"></script>
+
+
+	</body>
+
+</html>

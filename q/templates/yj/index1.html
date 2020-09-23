@@ -1,0 +1,1446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="/static/templets/aigou/images/favicon.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title> 国货代购转运一条龙服务 </title>
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/static/templets/aigou/css/daigou.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/index.css" rel="stylesheet" type="text/css">
+<script src="/static/templets/aigou/js/moneychange.js"></script>
+ <script type="text/javascript" src="/static/templets/aigou/banner/jquery-1.6.4.min.js"></script>
+<style>.main
+        {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .main .m-1
+        {
+            height: 300px;
+            width: 100%;
+        }
+        .main .m-1 .s_Search_Top
+        {
+            width: 399px;
+            height: 311px;
+            margin: inherit;
+            overflow: hidden;
+            float: left;
+            background: #fff;
+        }
+        .main .m-1 .s_Search_Top .s_search
+        {
+            margin-top: 39px;
+        }
+        .main .m-1 .m1-new
+        {
+            width: 420px;
+            float: left;
+            background: #fff;
+            margin-left: 10px;
+            padding: 20px;
+        }
+        .main .m-1 .m1-new .title
+        {
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid #ccc;
+            line-height: 30px;
+        }
+        .main .m-1 .m1-new .title h1
+        {
+            float: left;
+            font-size: 16px;
+            height: 30px;
+        }
+        .main .m-1 .m1-new .title a
+        {
+            color: Red;
+        }
+        .main .m-1 .m1-new ul li
+        {
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+        }
+        .main .m-1 .m1-new ul li a
+        {
+            font-size: 14px;
+        }
+        .main .m-1 .m1-login
+        {
+            float: right;
+            background: #fff;
+            width: 295px;
+            height: 311px;
+        }
+        .main .m-1 .m1-login h1
+        {
+            font-size: 18px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            color: #F45A8E;
+        }
+        .main .m-1 .m1-login table
+        {
+            margin-top: 20px;
+        }
+        .main .m-1 .m1-login table tr
+        {
+            height: 60px;
+        }
+        .main .m-1 .m1-login table tr td
+        {
+            font-size: 16px;
+            padding: 5px;
+        }
+        .main .m-1 .m1-login table tr td input[type='text'], .main .m-1 .m1-login table tr td input[type='password']
+        {
+            height: 30px;
+            border: 1px solid #ccc;
+        }
+        .main .m-1 .m1-login table tr td input[type='button'], .main .m-1 .m1-login table tr td input[type='submit']
+        {
+            width: 100px;
+            height: 35px;
+            background: #F45A8E;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .main .m-1 .m1-login .loginlast p
+        {
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+        }
+
+
+        .main .m-2
+        {
+            height: 341px;
+            width: 100%;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .main .m-2 .m2-l
+        {
+            float: left;
+            width: 399px;
+        }
+        .main .m-2 .m2-l .s_query_ul
+        {
+            width: 100%;
+        }
+        .main .m-2 .m2-l .s_query_ul li
+        {
+            width: 100%;
+            margin-top: 0;
+            height: 341px;
+            text-align: center;
+            border: 0;
+        }
+        .main .m-2 .m2-l .s_query_ul li b
+        {
+            margin-left: auto;
+            text-align: center;
+        }
+        .main .m-2 .m2-l .s_query_ul li h2
+        {
+            width: 100%;
+        }
+        .main .m-2 .m1-new
+        {
+            width: 728px;
+            float: left;
+            background: #fff;
+            margin-left: 10px;
+            padding: 20px;
+        }
+        .main .m-2 .m1-new .title
+        {
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid #ccc;
+            line-height: 30px;
+        }
+        .main .m-2 .m1-new .title h1
+        {
+            float: left;
+            font-size: 16px;
+            height: 30px;
+        }
+        .main .m-2 .m1-new .title a
+        {
+            color: Red;
+        }
+        .main .m-2 .m1-new ul li
+        {
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+        }
+        .main .m-2 .m1-new ul li a
+        {
+            font-size: 14px;
+        }
+        .main .m-3
+        {
+            height: 300px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .content_left
+        {
+            float: left;
+            margin-left: auto;
+            height: auto;
+            margin-top: 0;
+            width: 229px;
+        }
+        .main .m-3 .m3-r
+        {
+            background: #fff;
+            float: right;
+            width: 100%;
+        }
+        .main .m-3 .m3-r h1
+        {
+            background: #3270bd;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+            font-size: 14px;
+            color: #fff;
+        }
+        .main .m-3 .m3-r .m3-r-top ul
+        {
+            margin: 20px auto;
+            text-align: center;
+            height: 145px;
+        }
+        .main .m-3 .m3-r .m3-r-top ul li
+        {
+            display: inline-block;
+            width: 149px;
+            text-align: center;
+            height: 149px;
+            line-height: 149px;
+            background: #3270bd;
+            border-radius: 75px;
+            overflow: hidden;
+            color: #fff;
+            margin-left:45px;
+        }
+        .main .m-3 .m3-r .m3-r-top ul li a
+        {
+            color: #fff;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .main .m-3 .m3-r .m3-r-top ul li a.cur
+        {
+            font-size:12px;
+            margin-top:5px;
+            display: none;
+
+        }
+        .main .m-3 .m3-r .m3-r-top ul li.active
+        {
+            border-radius: 10px;
+            line-height: 22px;
+            background: #3270bd;
+            font-size:12px;
+        }
+
+        .cl
+        {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+
+<link href="/static/templets/aigou/css/main.min.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/default.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/cnindexnew.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"  src="/static/templets/aigou/js/headnew.js"></script>
+        	<script type="text/javascript">
+
+        	    $(function () {
+        	        var langobj = getCookie('lang');
+        	        var lang = "ch";
+        	        if (langobj != null) {
+        	            lang = langobj.substr(2, 2);
+        	            if (lang == "en") {
+        	                $(".lang").val("en");
+        	            }
+        	            else {
+        	                $(".lang").val("ch");
+        	            }
+
+        	        }
+        	        else {
+        	            $(".lang").val("ch");
+        	            lang = "ch";
+        	        }
+        	        $(".lang").click(function () {
+        	            var lst = "ch";
+        	            if ($(".lang").text() == "English") {
+        	                lst = "en";
+        	                $(".lang").text("中文");
+        	            }
+        	            $.ajax({
+        	                type: "POST",
+        	                url: "/Tools/jsonregister.ashx?action=lang",
+        	                data: "lstr=" + lst,
+        	                success: function (msg) {
+        	                    location.reload();
+        	                }
+        	            });
+
+        	        });
+
+
+        	    });
+
+        	    function getCookie(name)//取cookies函数
+        	    {
+        	        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+
+        	        if (arr != null) return unescape(arr[2]); return null;
+
+        	    }
+
+</script>
+
+
+
+
+    <header class="">
+         <div class="shortcut" style="z-index:400; background-color:#f8f8f8;" >
+             <div class="w top_nav">
+                 <ul class="fl login">
+
+               <!-- <li><span style="margin-right:30px; cursor:pointer;" class="lang" >English</span></li>-->
+
+                 <li  style="margin-right:20px;">CNY : MRY = &nbsp;<b style="color:#f47a20;">1 : 1.53</b></li>
+                 <li  style="margin-right:20px;">CNY : SGD = &nbsp;<b style="color:#f47a20;">1 : 4.6</b></li>
+                 </ul>
+                 <ul class="fr">
+                                     <li><span class="login_t"><a href="{% url 'q:userindex' %}" > {{ u1.username }}</a>&nbsp;&nbsp;|</span><a href="{% url 'q:logout' %}" >退出</a>&nbsp;&nbsp;|</li>
+
+
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:daicai' %}" target="_blank" rel="nofollow"><i class=" icon_shop"></i>购物车<em class="top_red ShoppingNum"></em></a>&nbsp;&nbsp;|</li>
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:userindex' %}" rel="nofollow"><i class=" icon_u"></i>用户中心</a></li>
+                     <!-- <li class="fore"><a href="addzyorder.html" id="shoppingCart" rel="nofollow"><i class="icon_m icon_my"></i><span><em>我的仓库</em><em class="none gerenc">&nbsp;&nbsp;&nbsp;&nbsp;</em></span><em class="top_red OrderNum"></em></a></li>-->
+
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+
+         <div class="w por header-logo" style="height: 100px;"  >
+
+
+                <div class="logo-wrap logo" align="center">
+                        <a  href="{% url 'q:index' %}"><font size="6" color="#6495ed">新领域国际物流</font></a>
+                 </div>
+
+
+
+             <div class="search-wrap search" style="margin-top:30px;">
+<form action="{% url 'q:addurl' %}" method="post" name="addurl">
+                     {% csrf_token %}
+                     <input type="text" id="Text1" class="fl search_text head-search-text" style="width:448px;padding-left:2px;" name="goods_url" autofocus="true" placeholder="请输入商品的关键词或商品的链接" value="{{ article.goods_url }}"/>
+                     <span class="fl button " onclick="addurl.submit()" id="headSearch"><span class="search-val-text" >代购</span></span>
+                 </form>
+                     <span class="fl" style="margin-left: 50px;margin-top: -5px;">
+
+<div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1493651104050">
+
+</div>
+<script>    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+
+      </span>
+
+             </div>
+             <div class="cb"></div>
+         </div>
+            <div class="shortcut" id="nav_list" style="height:54px;">
+             <div class="w">
+                 <ul class="nav clearfix">
+                     <li class="on" ><a href="{% url 'q:index' %}" class="nav_l" style="height:54px; margin-bottom:2px; margin-top:-1px; margin-left:-1px; ">首页</a></li>
+                     <!--<li class="zhidemai" ><a href="golist-650-0.html" class="nav_l">热门商品</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-80' %}" class="nav_l">关于我们</a>
+                    <ul>
+      <li><a href="{% url 'q:content-68' %}">新用户注册</a></li>
+      <li><a href="{% url 'q:content-73' %}">赔偿标准</a></li>
+      <li><a href="{% url 'q:content-65' %}">服务条款</a></li>
+      </ul>
+                     </li>
+                      <li class="zhidemai" ><a href="{% url 'q:addurl' %}" class="nav_l">代购</a>
+                        <!-- <ul>
+      <li><a href="/content-68.html">新用户注册</a></li>-->
+     <!-- <li><a href="/content-25.html">承运条款</a></li>-->
+
+      <!--</ul>-->
+                      </li>
+{#                     <li class="zhidemai" ><a href="#" class="nav_l">物流跟踪</a>#}
+{#                     <ul>#}
+{#                     <li><a href="/packagesearch.html">包裹查询</a></li>#}
+{#      <li><a href="/check_express.html">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+{#       </ul>#}
+{#                     </li>#}
+                                          <li class="zhidemai" ><a href="#" class="nav_l">物流跟踪</a>
+                     <ul>
+                     <li><a href="{% url 'q:packagesearch' %}">包裹查询</a></li>
+{#      <li><a href="#">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+       </ul>
+                     </li>
+
+                     <li class="zhidemai" ><a href="{% url 'q:content-85' %}" class="nav_l">空运服务</a>
+
+       <!--              <ul>
+      <li><a href="/content-5.html"">空运费用</a></li>
+      <li><a href="/content-4.html">空运计费重量</a></li>
+      <li><a href="/content-22.html">不能承运货件</a></li>
+      <li><a href="/content-25.html">承运条款</a></li>
+
+      </ul>   -->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-86' %}" class="nav_l" >海运服务</a>
+                     <!-- <ul>
+            <li><a href="content-32.html">海运服务说明</a></li>
+        </ul>-->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-87' %}" class="nav_l">支付方式</a>
+
+                     <!--<ul>
+      <li><a href="/content-47.html"">支付宝支付</a></li>
+      <li><a href="/content-48.html">中国银行汇款</a></li>
+      </ul>-->
+                     </li>
+                    <!-- <li class="zhidemai" ><a href="/content-80.html" class="nav_l">常见问题</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-53' %}" class="nav_l">联系我们</a></li>
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+</header>
+        <style>#guzz{ display:none; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:#ccc; z-index:100;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
+#guzz img{ position:fixed; top:40%; left:0; right:0; bottom:auto; margin:0 auto; }
+.spinner {
+  margin: 100px auto;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+</style>
+
+<div id="guzz">
+<!--<img src="/templets/aigou/images/jjz.gif" />-->
+<div style=" position:absolute; top:30%; left:0; right:0; bottom:auto;">
+<div class="spinner">
+  <div class="spinner-container container1">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container2">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container3">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".search_but").click(function () {
+            var val = $(this).prev().val();
+            if (val != '') {
+                $("#guzz").show();
+                sendgoods();
+            }
+        })
+
+    });
+    function sendgoods() {
+        if ($("#_searchURL").val() != "") {
+            $("#guzz").show();
+            $("#searchURL").submit();
+        }
+    }
+
+    function sendgoods2() {
+        if ($("#_hidesearchURL").val() != "") {
+            $("#guzz").show();
+            $("#hidesearchURL").submit();
+        }
+    }
+
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="/static/templets/aigouen/banner/lrtk.css">
+<script type="text/javascript" src="/static/templets/aigou/banner/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="/static/templets/aigou/banner/cufon-yui.js"></script>
+<script type="text/javascript" src="/static/templets/aigou/banner/scripts.js"></script>
+<script type="text/javascript" src="/static/templets/aigou/banner/custom.js"></script>
+<link href="/static/templets/aigou/msg/style.css" type="text/css" rel="stylesheet" />
+ <script type="text/javascript" src="/static/templets/aigou/msg/msg.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".m3-r-top ul li").hover(function () {
+            $(this).find(".cur").removeClass("cur").siblings().addClass("cur").parent().addClass("active");
+
+        }, function () {
+
+            $(this).find(".cur").removeClass("cur").siblings().addClass("cur").parent().removeClass("active");
+        })
+    });
+
+    </script>
+     <script type="text/javascript">
+         function checksearch() {
+             var checknum = $("input[name='txtchecksearch']").val();
+             window.location.href = "/check_express.html?expressno=" + checknum;
+         }
+         function package() {
+             var packnum = $("input[name='txtpagername']").val();
+             window.location.href = "/packagesearch.html?expressno_e=" + packnum;
+         }
+         function haipackage() {
+             var packnum = $("input[name='txthaichecksearch']").val();
+             window.location.href = "/haiordersearch.html?expressno_e=" + packnum;
+         }
+</script>
+
+<div class="page-index">
+{% if c %}
+    {% for c in c %}
+<input type="text" name="isshow" id="isshow" value="0" style="display:none;"/>
+<input type="text" name="strmessage" id="strmessage" value="<div class='theme-tips'><p>{{ c.title }}</p><p class='notice'><font color='red'>{{ c.content }}</font></p>
+<p>联系QQ：
+<a href='http://wpa.qq.com/msgrd?V=1&amp;Uin=&amp;Site=QQ咨询&amp;Menu=yes' target='_blank'>
+<img src=' http://wpa.qq.com/pa?p=1:1022910941:4'  border='0' alt='QQ' /> 客服QQ</a>
+<p style='padding-left:0px'>新领域物流唯一官方网站：<a href='#'  target='_blank'></a></p><div style='clear: both;'></div></div>" style="display:none;"/>
+
+    {% endfor %}
+    {% else %}
+    {% endif %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        var notite = document.getElementById("isshow").value;
+        if (notite != "1") {
+            var objPos = mousePosition(window);
+            var messContent = document.getElementById("strmessage").value;
+            showMessageBox('', messContent, objPos, 350);
+        }
+    });
+  </script>
+
+
+
+<style type="text/css">.hover {color:#F47A20;font-weight:bold;}
+</style>
+
+<div style="clear:both;"></div>
+
+
+
+
+
+
+<div class="wrap">
+
+      <div class="main">
+        <div class="m-1">
+{#            <div class="s_Search_Top">#}
+{#                <div class="s_search">#}
+{#                    空运查询<a class="s_sub1" href="javascript:void(0);" onclick="checksearch()"></a><input name="txtchecksearch" type="text" class="s_text1" style="color: rgb(204, 204, 204);"></div>#}
+{#                <div class="s_search">#}
+{#                    海运查询<a class="s_sub1" href="javascript:void(0);" onclick="haipackage()"></a><input type="text" name="txthaipagername" class="s_text1" style="color: rgb(204, 204, 204);"></div>#}
+{#                <div class="s_search">#}
+{#                    包裹查询<a class="s_sub1" href="javascript:void(0);" onclick="package()"></a><input type="text" name="txtpagername" class="s_text1" style="color: rgb(204, 204, 204);"></div>#}
+{#            </div>#}
+{#            <div class="m1-new" style="width:95%; height:271px;">#}
+{##}
+{#            <form id="form2">#}
+{#            <h2 style=" color: #3270bd; margin-left: 50%;font-size: 18px;font-weight: bold;">#}
+{#                            运费查询</h2>#}
+{#                            <div style=" height:192px; overflow:hidden; margin-top:20px; text-align: center;">#}
+{#                                <span style="float:left; margin-left:50px; width:570px;height:45px;">#}
+{#                                <p class="countries" style="">国家</p>#}
+{#                                <select class="countries_input" id="ddlarea">#}
+{#                                    <option value="0">-请选择-</option>#}
+{#                                    <option value="1">西马（马来西亚）/West Malaysia</option><option value="18">东马（马来西亚）/East Malaysia</option><option value="46">新加坡 /Singapore</option>#}
+{#                                </select>#}
+{#                                <p class="countries2">货运</p>#}
+{#                                <select class="countries_input" id="ddlway">#}
+{#                                    #}
+{#                                </select>#}
+{#                                </span>#}
+{#                                <span style=" float:left; width:570px;height:45px;margin-left:50px;">#}
+{#                                <p class="countries">重量</p>#}
+{#                                <input type="text" id="txtweight" class="countries_input">#}
+{#                                <p class="countries3">KG</p>#}
+{##}
+{#                                <p class="countries3">类型</p>#}
+{#                                    <select class="countries_input" style="" id="ddlissensive">#}
+{#                                    <option value="0">普通</option>#}
+{#                                    <option value="1">敏感</option>#}
+{#                                    </select>#}
+{##}
+{#                                </span>#}
+{#                                #}
+{#                                <span style="float:left; width:670px;height:45px;margin-left:50px;">#}
+{#                               <p class="countries">材积重</p>#}
+{#                                <input type="text" id="txtcnum" class="countries_input2">#}
+{#                                <p class="countries3">长 <span>×</span></p>    #}
+{#                                <input type="text" id="txtknum" class="countries_input2">#}
+{#                                <p class="countries3">宽 <span>×</span></p>  #}
+{#                                <input type="text" id="txtgnum" class="countries_input2">#}
+{#                                <p class="countries3">高</p>  #}
+{#                                <label style="line-height:35px; color:Red">*如果不知道材质，请留空直接跳过</label>#}
+{#                                </span>#}
+{#                                <span style="float:left; width:570px;height:25px;margin-left:40px;">#}
+{#                               <div style="clear: both; font-size:15px; ">#}
+{#                    #}
+{#                    <p class="countries" >#}
+{#                            计费方式:<input type="radio" value="0"  checked="" name="countway">普通<input type="radio"  value="1" name="countway">半抛<input type="radio"  value="2" name="countway">全抛#}
+{#                     </p></div>#}
+{#                               </span>#}
+{#                              #}
+{#                                <span style=" line-height:22px;float:left; width:570px;height:25px;margin-left:30px;">#}
+{#                               <p id="priceresult" style="margin-left:40px; color:Red; font-size:16px;"></p>#}
+{#                               </span>#}
+{#                               <div style=" clear:both;"></div>#}
+{#                               </div>#}
+{#                               <span onclick="getprice()" class="data_b" style="cursor: pointer; margin-right: 10px;margin-left: 80px;height: 40px;line-height: 40px;width: 180px;background-color:#3270bd;">确定提交</span>#}
+{#                               <input type="reset" class="data_b" style="cursor: pointer;height: 40px;line-height: 40px;width: 180px;background-color:#3270bd;" value="清空数据">#}
+{#             </form>#}
+{##}
+{#                <div class="cl">#}
+{#                </div>#}
+{#              #}
+{#          #}
+{#            #}
+{#        </div>#}
+        <div class="cl">
+        </div>
+        <div class="m-2">
+            <form action="{% url 'q:hl' %}" method="post">
+                {% csrf_token %}
+            <div class="m2-l">
+                <ul class="s_query_ul">
+                    <li>
+                        <h2 style="font-size:16px;">
+                            汇率换算</h2>
+                        <b>马币（RM）</b><br>
+                        <input type="text" id="rmtotal" style="color: rgb(204, 204, 204);" class="s_query_input" name="MYR" value="{{ d.MYR }}"><br>
+                        <b>人民币（RMB）</b><br>
+                        <input type="text" id="rmbtotal" style="color: rgb(204, 204, 204);" class="s_query_input" name="CNY" value="{{ d.CNY }}"><br>
+                        <b>新币（SGD）</b><br>
+                        <input type="text" id="sgtotal" style="color: rgb(204, 204, 204);" class="s_query_input" name="SGD" value="{{ d.SGD }}">
+                        <b>
+                           <!-- <i>*当前汇率1￥= 5.4RM</i> -->
+                            <i>＊我们也提供支付宝代付/代充值/中国银行转账充值/微信红包充值服务＊</i>
+                            <i>＊欢迎联系客服索取有关详情＊</i>
+                            <input type="submit" class="s_query_sub1" style="margin-top:10px;"  value="确定提交"><input type="submit" onclick="clearall();" class="s_query_sub1" style="margin-top:10px;" value="清空数据">
+                    </b></li><b>
+                </b></ul><b>
+            </b></div></form>
+
+                <b>
+
+            <div class="m1-new" style="width:361px;">
+                <div class="title">
+                    <h1>
+                        系统公告</h1>
+                    </div>
+                <div class="cl">
+                </div>
+                <ul>
+                    {% for a in a %}
+                        <li><a href="{% url 'q:an_pa' a.id %}">{{ a.title }}</a><span style=" float:right;">{{ a.update_time }}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="m1-new" style="width:340px;">
+                <div class="title">
+                    <h1>
+                       帮助中心</h1>
+                    <!--<a href="/ArticleList-58.html" style="float: right;">More</a>--></div>
+                <div class="cl">
+                </div>
+                <ul>
+                    {% for a in b %}
+                        <li><a href="{% url 'q:help_pa' a.id %}">{{ a.title }}</a><span style=" float:right;">{{ a.update_time }}</span></li>
+                    {% endfor %}
+
+<!--<dd><a href="/help-46.html">代运教学</a></dd>-->
+
+{#<li><a href="{% url 'q:content-49' %}">国际信用卡</a><span style=" float:right;">2015/06/11</span></li>#}
+{#<!--<dd><a href="/help-49.html">国际信用卡</a></dd>-->#}
+{##}
+{#<li><a href="{% url 'q:content-51' %}">物流运费</a><span style=" float:right;">2015/06/11</span></li>#}
+{#<!--<dd><a href="/help-51.html">物流运费</a></dd>-->#}
+{##}
+{#<li><a href="{% url 'q:content-53' %}">联系我们</a><span style=" float:right;">2015/06/11</span></li>#}
+{#<!--<dd><a href="/help-53.html">联系我们</a></dd>-->#}
+{##}
+{#<li><a href="{% url 'q:content-54' %}">代购退换货政策</a><span style=" float:right;">2015/06/11</span></li>#}
+{#<!--<dd><a href="/help-54.html">代购退换货政策</a></dd>-->#}
+{##}
+{#<li><a href="{% url 'q:content-56' %}">海关及税项</a><span style=" float:right;">2015/06/11</span></li>#}
+{#<!--<dd><a href="/help-56.html">海关及税项</a></dd>-->#}
+{##}
+{#<li><a href="{% url 'q:content-57' %}">商品估重</a><span style=" float:right;">2015/06/11</span></li>#}
+{#<!--<dd><a href="/help-57.html">商品估重</a></dd>-->#}
+{##}
+{#<li><a href="{% url 'q:content-58' %}">尺码换算</a><span style=" float:right;">2015/06/11</span></li>#}
+{#<!--<dd><a href="/help-58.html">尺码换算</a></dd>-->#}
+
+                </ul>
+            </div>
+        </b>
+
+
+        </div><b>
+        <div class="cl">
+        </div>
+        <div class="m-3">
+            <div class="m3-r">
+                <div class="m3-r-top">
+                    <h1>
+                        为何选择云际货运</h1>
+                    <ul>
+
+
+<li>
+<a href="#">系统化的代运服务</a>
+
+<a href="#" class="cur" style="font-size:12px; margin-top:15px;">
+云际货运中国代运网坚持为客户提供最全面，功能丰富的代运系统，最好的价格，并没有任何隐藏的费用。
+</a>
+</li>
+
+
+<li>
+<a href="#">免费增值服务</a>
+
+<a href="#" class="cur" style="font-size:12px; margin-top:15px;">
+	提供60天免费仓库寄存仓存服务,自签收之日起计；
+
+	免费重新包装, 为客户将货物体积减至最少,节省国际运费；
+</a>
+</li>
+
+
+<li>
+<a href="#">专业打包团队</a>
+
+<a href="#" class="cur" style="font-size:12px; margin-top:15px;">
+	为客户免费打包服务,专业打包团队为客户将货物体积减少到最小，为您节约国际运费
+</a>
+</li>
+
+
+<li>
+<a href="#">支持多种付款方式</a>
+
+<a href="#" class="cur" style="font-size:12px; margin-top:15px;">
+	我们目前支持的付款方式有：支付宝、微信转账，淘宝付款、中国工商银行、中国建设银行、马来西亚Public Bank等多种方式
+</a>
+</li>
+
+
+<li>
+<a href="#">7/24 在线下单系统</a>
+
+<a href="#" class="cur" style="font-size:12px; margin-top:15px;">
+	我们的专业人员验证每个订单，以减少欺诈行为，并确保我们的现有客户的安全。我们保证在12小时内提供资料
+</a>
+</li>
+
+
+<li>
+<a href="#">多个国家出货渠道</a>
+
+<a href="#" class="cur" style="font-size:12px; margin-top:15px;">
+	我们拥有马来西亚、新加坡、澳大利亚、印尼、泰国、美国等多个国家的出货渠道。
+</a>
+</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h1>
+                        使用云际货运</h1>
+                    <div class="s_query">
+                        <div class="youqi_1 ">
+                            <h2>
+                                <img src="/static/templets/aigou/images/foot1.png" align="absmiddle"><a href="#" style="font-size:18px;">免费注册</a></h2>
+                            <p>
+                                <a href="#">立即拥有免费仓库空间</a></p>
+                            <p>
+                                <a href="#">免费享受个人仓库管家</a></p>
+                        </div>
+                        <div class="youqi_2">
+                            <h2>
+                                <img src="/static/templets/aigou/images/foot2.png" align="absmiddle"><a href="#"  style="font-size:18px;">发货至仓库</a></h2>
+                            <p>
+                                <a href="#">自己网上购物的包裹</a></p>
+                            <!--<p>
+                                <a href="#">悠奇代购的包裹</a></p>-->
+                            <p>
+                                <a href="#">亲朋好友寄来的包裹</a></p>
+                        </div>
+                        <div class="youqi_1">
+                            <h2>
+                                <img src="/static/templets/aigou/images/foot3.png" align="absmiddle"><a href="#"  style="font-size:18px;">发起国际运单</a></h2>
+                            <p>
+                                <a href="#">享3-5折国际运费</a></p>
+                            <p>
+                                <a href="#">免费集中您的货物打包</a></p>
+                            <p>
+                                <a href="#">与国际顶级快递商合作</a></p>
+                        </div>
+                        <div class="youqi_2">
+                            <h2>
+                                <img src="/static/templets/aigou/images/foot4.png" align="absmiddle"><a href="#"  style="font-size:18px;">支付国际运费</a></h2>
+                            <p>
+                                <a href="#">支持马币、新币、人民币等多种支付方式</a></p>
+                    <!--        <p>
+                                <a href="#">购买保险可保价</a></p>
+                            <p>
+                                <a href="#">及时到账</a></p>-->
+                        </div>
+                        <div class="youqi_1 ">
+                            <h2>
+                                <img src="/static/templets/aigou/images/foot5.png" align="absmiddle"><a href="#"  style="font-size:18px;">签收包裹</a></h2>
+                            <p>
+                                <a href="#">24小时闪电发货</a></p>
+                            <p>
+                                <a href="#">国外配送到家</a></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="youqi" style="margin-top:10px;">
+            <h1>
+                <img src="/static/templets/aigou/images/foot.png" width="21" height="21" align="absmiddle" />合作伙伴</h1>
+            <ul class="s_Partners_ul">
+               <!-- <li><a href="">
+                    <img src="/templets/yixin/images/drrg_03.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_05.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_07.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_09.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_11.png" /></a></li>
+                <li ><a href="">
+                    <img src="/templets/yixin/images/drrg_13.png" /></a></li>
+                <li class="s_Partners_li"><a href="">
+                    <img src="/templets/yixin/images/drrg_21.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_22.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_23.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_24.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_25.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_26.png" /></a></li>
+                <li><a href="">
+                    <img src="/templets/yixin/images/drrg_25.png" /></a></li>
+                <li class="s_Partners_li"><a href="">
+                    <img src="/templets/yixin/images/drrg_21.png" /></a></li>-->
+
+<li><a href="http://www.skynet.com.my"><img src="/static/UpLoadFiles/20130708/2013070800313718.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.aramex.com/"><img src="/static/UpLoadFiles/20130708/2013070800324402.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.cn.dhl.com/"><img src="/static/UpLoadFiles/20130708/2013070800331845.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.fedex.com/cn/"><img src="/static/UpLoadFiles/20130708/2013070800333706.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.ups.com/cn"><img src="/static/UpLoadFiles/20130708/2013070800335067.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.taobao.com/"><img src="/static/UpLoadFiles/20130708/2013070800341814.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.tmall.com/"><img src="/static/UpLoadFiles/20130708/2013070800344305.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.jd.com/"><img src="/static/UpLoadFiles/20130708/2013070800350923.jpg" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.amazon.cn/"><img src="https://img.alicdn.com/imgextra/i3/2052635022/TB2cYeHqHBmpuFjSZFAXXaQ0pXa_!!2052635022.png" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://www.dangdang.com/"><img src="/static/UpLoadFiles/20170504/2017050400212977.png" width="150" height="62" style="border:none;" /></a></li>
+
+<li><a href="http://m.kuaidi100.com/"><img src="https://img.alicdn.com/imgextra/i2/767216956/TB22CTxmutTMeFjSZFOXXaTiVXa_!!767216956.png" width="150" height="62" style="border:none;" /></a></li>
+
+            </ul>
+        </div>
+            </div>
+        </div>
+    </b></div>
+
+
+
+
+
+    </div>
+    <script type="text/javascript">
+
+
+        $(function () {
+            $("#txtNum").click(function () {
+
+                if ($(this).val() == "限一次最多输入8个运单号/订单号/包裹号") {
+                    $(this).val("");
+                } else {
+                    return;
+                }
+            });
+            $("#txtNum").blur(function () {
+                if ($(this).val() == "") {
+                    $(this).val("限一次最多输入8个运单号/订单号/包裹号");
+                }
+                else {
+                    return;
+                }
+            });
+
+
+            $("#ddlarea").change(function () {
+                $.ajax({
+                    url: "/Tools/jsonpack.ashx",
+                    data: { "action": "getway", area_id: $("#ddlarea").val() },
+                    type: "POST",
+                    dataType: "text",
+                    success: function (data) {
+                        $("#ddlway").html("");
+                        $("#ddlway").append(data);
+                    }
+                });
+            });
+
+            $("#bfm").addClass('hover');
+        });
+
+
+        function getprice() {
+            var cnum = $('#txtcnum').val();
+            var knum = $('#txtknum').val();
+            var gnum = $('#txtgnum').val();
+            var way = $('#ddlway').val();
+            var area = $('#ddlarea').val();
+            var weight = $('#txtweight').val();
+            var usergroupid = $('#usergroupid').val();
+            var issensive = $('#ddlissensive').val();
+            var voluemweight = 0;
+            var countway = $("input[name='countway']:checked").val();
+
+            if (cnum != "" && knum != "" && gnum != "") {
+                var voluemweight = ((cnum * knum * gnum) / 6000).toFixed(2);
+            }
+            if (weight == "") {
+                alert("请填写重量！");
+            }
+
+            $.ajax({
+                url: "../Tools/jsonpack.ashx",
+                type: "post",
+                data: { "usergroupid": usergroupid, "weight": weight, "voluemweight": voluemweight, "strpostway": way, "area_id": area, "action": "getprice", "voluemweight": voluemweight, "issensive": issensive,"countway":countway },
+                beforeSend: function () { $('#priceresult').text(''); },
+                error: function () { alert('出错啦！'); },
+                success: function (sb) {
+                    var result = sb.substring(0, 1);
+                    if (result == 1) {
+                        var strresult = sb.substring(1, sb.length);
+                        //alert(strresult.split(',')[0]);
+                        //alert($("#priceresult").text())
+                        $('#priceresult').text("价格：" + strresult.split(',')[0]);
+                        //document.getElementById("priceresult").value = strresult.split(',')[1]
+                    }
+                    else if (result == 0) {
+                        $('#priceresult').text('数据异常！');
+                        return false;
+                    }
+                    else if (result == 2) {
+                        $('#priceresult').text('该用户未有报价！');
+                        return false;
+                    }
+                    else {
+                        //$('#priceresult').text = "价格：" + '0';
+                        //document.getElementById("priceresult").value = '0';
+                        $('#priceresult').text('系统未有该区域的报价！');
+                        return false;
+                    }
+
+                }
+            })
+
+
+        }
+
+
+
+        function checkstatelist() {
+            var statelist = $('#txtNum').val();
+            statelist = statelist.replace(/\n/g, ",");
+            if (statelist == "" || statelist == "限一次最多输入8个运单号/订单号/包裹号") {
+                alert("请先输入号码！");
+                return;
+            }
+            art.dialog.open('checkstatelist.html?step=' + statelist, {
+                title: '查询列表',
+                width: 700,
+                //height:600,
+                modal: true,
+                lock: true,
+                draggable: false,
+                resizable: false
+            });
+
+        }
+
+</script>
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+
+    //其它分类点击后切换
+    $('.m_other>div').click(
+		function () {
+		    $(this).addClass('m_othercon_hover');
+		    $("#" + $(this).attr('id') + "_products").show();
+		    $('.m_other>div').not($(this)).each(
+				function () {
+				    $(this).removeClass('m_othercon_hover');
+				    $("#" + $(this).attr('id') + "_products").hide();
+				}
+			);
+		}
+);
+
+    $(function () {
+        $("#sports_products").css('display', 'none');
+        $("#beauty_products").css('display', 'none');
+        $("#jewelry_products").css('display', 'none');
+        $("#daily_products").css('display', 'none');
+        $("#gadget_products").css('display', 'none');
+        $("#kids_products").css('display', 'none');
+        $("#pets_products").css('display', 'none');
+        var images = $('.m_brand').find('a');
+        images.click(function () {
+            $(this).addClass('hovers');
+            images.not($(this)).removeClass('hovers');
+            //切换图片code
+
+        });
+    })
+
+    //首页品牌切换
+    function brandshow(key) {
+        switch (key) {
+
+        }
+        $("#brandInfo").html('');
+        $("#brandInfo").html(barndxx);
+
+    }
+
+
+    //推荐商品
+    var hotpage = 0;
+    var hotgoods = [{ "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D0LHsfpdXEXwcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtv9f0856j6KdCWhNg7Ten%2B810NIwNEZl1cSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "79.00", "commission_num": "377", "commission_rate": "500.00", "commission_volume": "1842.28", "item_location": "\u6d59\u6c5f \u5609\u5174", "nick": "jeffmao1209", "num_iid": "521130516356", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1N3i0GXXXXXXkapXXXXXXXXXX_!!0-item_pic.jpg", "price": "359.09", "seller_credit_score": "11", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DDYsF5T%2FSL1UcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtv9f0856j6KfGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Anti season clearance Korean Slim luxury oversized fur collar and long sections thicker down jacket female tide big yards tooling", "volume": "944" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D1Smnthirk9ccQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH6VCVzu3HtGukFAdOkW6IjUtV2RqXODX1IYULNg46oBA%3D&spm=2014.21524001.1.0", "commission": "35.40", "commission_num": "134", "commission_rate": "600.00", "commission_volume": "200.77", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u4f50\u4e39\u5974\u5b98\u65b9\u65d7\u8230\u5e97", "num_iid": "521600841934", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB180TRKFXXXXbuXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "134.09", "seller_credit_score": "18", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DkEcWnZfs4wEcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH6VCVzu3HtGtxKmPmpIKZsA%3D%3D&spm=2014.21524001.1.0", "title": "Giordano coat fall and winter clothes female machine washable hooded down jacket, Ms. long-sleeved light jacket 05375546", "volume": "17" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DhFcFn8jWtwgcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm4yM6pLx0PPavOdyjs3nf7yMeXWpsEPJXxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "59.94", "commission_num": "800", "commission_rate": "600.00", "commission_volume": "2002.74", "item_location": "\u6c5f\u82cf \u82cf\u5dde", "nick": "\u62c9\u590f\u8d1d\u5c14\u5b98\u65b9\u65d7\u8230", "num_iid": "522983529267", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1nbhkKpXXXXa.XVXXXXXXXXXX_!!0-item_pic.jpg", "price": "227.05", "seller_credit_score": "16", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DrgVgZI6lB5McQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm4yM6pLx0PPYMlu5kMKse3g%3D%3D&spm=2014.21524001.1.0", "title": "La Chapelle 2015 new winter wool hat in special quilted down jacket and long sections female 10009737", "volume": "53" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DbLNbLFQM9fAcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1cwfzX92rTh1Vmbjmj6yzYHmpTaB3MP%2BVcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "49.80", "commission_num": "36", "commission_rate": "1000.00", "commission_volume": "951.82", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "\u7b80\u5355\u7684\u5e78\u798f2030", "num_iid": "523174828228", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1poXCKXXXXXbTXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "113.18", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D8L3xQYpHNLYcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1cwfzX92rTh3GDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "European Grand Prix 2015 autumn and winter new Korean long section of the ultra-thin light-colored female coat lapel Slim Down", "volume": "932" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DMp6kUww%2BOzUcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtJsmwwuc9kI2iuLGtDJxpAlFytuKLSKRMxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "53.28", "commission_num": "447", "commission_rate": "600.00", "commission_volume": "17363.42", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "yidina\u65d7\u8230\u5e97", "num_iid": "523101458045", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1XfOiKpXXXXXHXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "201.82", "seller_credit_score": "12", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DF%2BmdMZMMOCEcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtJsmwwuc9kI29Gf2zmUiveQ%3D%3D&spm=2014.21524001.1.0", "title": "2015 new winter coat and long sections Slim Thigh European leg of European goods Nagymaros collar long down jacket women", "volume": "792" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D8g91AFjRz%2FMcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUmVIpJgDZfPw5oT5f%2BqzFiht9wODSvzYmBu8%2FregfqUcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "59.60", "commission_num": "84", "commission_rate": "500.00", "commission_volume": "573.34", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "\u8d31\u6b8b\u96e8", "num_iid": "523927858164", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB146DuKVXXXXabXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "270.91", "seller_credit_score": "9", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DUzoMbH4M9KIcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUmVIpJgDZfPw5oT5f%2BqzFjGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Long down jacket female long knee extension Nagymaros collar thickening big yards Korean Slim was thin 2015 new wave", "volume": "374" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DjsQq7S1B%2BSccQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtqSSMDaQaYetnR93LjIwqTOVHF1xI%2FLtExgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "22.40", "commission_num": "0", "commission_rate": "500.00", "commission_volume": "0.00", "item_location": "\u6c5f\u82cf \u5357\u4eac", "nick": "love\u62c9\u8299", "num_iid": "524159905596", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1w6W1KVXXXXcxXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "101.82", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D92f0oIiWvrocQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtqSSMDaQaYesvfeUUl6%2F7pA%3D%3D&spm=2014.21524001.1.0", "title": "Puffs high-end custom luxury macarons pink white raccoon Nagymaros collar down jacket Girls long section of thicker", "volume": "835" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D45b%2F1KZXTRAcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm8380%2BnBK6%2FHoc4%2B2fSoZBbc%2B1oEfEJ%2B2xgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "8.50", "commission_num": "0", "commission_rate": "150.00", "commission_volume": "0.00", "item_location": "\u6c5f\u82cf \u82cf\u5dde", "nick": "\u6dd8\u8fd0\u518d\u6765", "num_iid": "525299286614", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB19YDsJVXXXXblXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "128.86", "seller_credit_score": "1", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D6AyEBB7YhVgcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm8380%2BnBK6%2FE%2B5QowgvHJPA%3D%3D&spm=2014.21524001.1.0", "title": "Po gifted ni Desktop cosmetic jewelry storage rack storage rack shelf racks washbasin drop zone drawer", "volume": "0" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DS0i7BSlF1WIcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmeHMNoVpqR4GTOMToPVsSE777q0eEX7v6cSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "2.54", "commission_num": "0", "commission_rate": "150.00", "commission_volume": "0.00", "item_location": "\u6c5f\u82cf \u5357\u4eac", "nick": "\u7d20\u989c\u5c0f\u61d2\u61d2", "num_iid": "43047670659", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1ae_mKVXXXXXyXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "38.41", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DpzOpEWAZUq4cQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmeHMNoVpqR4FMdIp1rr4P3Q%3D%3D&spm=2014.21524001.1.0", "title": "Po gifted ni bathroom toilet toilet shelving shelf storage rack bathroom shelf supplies floor toilet rack", "volume": "1" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DchzYzQPNCxIcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPW1fYtCnypYp6jtjOVc%2FXEbcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "21.68", "commission_num": "0", "commission_rate": "750.00", "commission_volume": "0.00", "item_location": "\u4e0a\u6d77", "nick": "\u65f6\u5c1a\u62c9\u98ce\u5c0f\u7537\u4eba", "num_iid": "520025215327", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1OpT9IXXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "65.68", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dz28LrBeEHcocQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPXGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Po gifted ni bathroom Desktop Storage Rack Shelves toilet bathroom floor cracks shelving pod finishing frame", "volume": "0" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DCX5PZsT2ZG4cQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPX3p0Vh2nMCykcGwRXqQZ74cSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "14.85", "commission_num": "0", "commission_rate": "750.00", "commission_volume": "0.00", "item_location": "\u4e0a\u6d77", "nick": "\u65f6\u5c1a\u62c9\u98ce\u5c0f\u7537\u4eba", "num_iid": "520104340409", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/T1mT.PFL0bXXXXXXXX_!!0-item_pic.jpg", "price": "45.00", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dz28LrBeEHcocQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPXGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Po gifted ni clothes rack storage rack wardrobe finishing off compartment bulkhead DIY magic piece cabinet shelf support Shelf", "volume": "0" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DCTGUdYVxrjwcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPX3p0Vh2nMCytDfKw0MbdcOcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "13.42", "commission_num": "0", "commission_rate": "750.00", "commission_volume": "0.00", "item_location": "\u4e0a\u6d77", "nick": "\u65f6\u5c1a\u62c9\u98ce\u5c0f\u7537\u4eba", "num_iid": "520109487031", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1MNk4IXXXXXaEXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "40.68", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dz28LrBeEHcocQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPXGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Po gifted ni cosmetics planes sink countertop daily storage rack bathroom shelf washbasin Desktop Stands", "volume": "0" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DL%2FEM2lxPvBccQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPXu4qnY4qx1JQhI3rOt8LSiIYULNg46oBA%3D&spm=2014.21524001.1.0", "commission": "16.35", "commission_num": "0", "commission_rate": "750.00", "commission_volume": "0.00", "item_location": "\u4e0a\u6d77", "nick": "\u65f6\u5c1a\u62c9\u98ce\u5c0f\u7537\u4eba", "num_iid": "45787778974", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1j3zdHVXXXXaKXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "49.55", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dz28LrBeEHcocQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPXGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Po gifted ni dormitory artifact debris rack storage rack finishing nail Free bedroom telescopic multifunction shelving brackets", "volume": "0" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DC%2FzQ7RyZTvEcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPVxnSo7WExsnVHLajAQG0tsIYULNg46oBA%3D&spm=2014.21524001.1.0", "commission": "16.42", "commission_num": "0", "commission_rate": "750.00", "commission_volume": "0.00", "item_location": "\u4e0a\u6d77", "nick": "\u65f6\u5c1a\u62c9\u98ce\u5c0f\u7537\u4eba", "num_iid": "45867392977", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1HRQdHpXXXXcGXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "49.77", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dz28LrBeEHcocQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpH9xZ8SHa8fPXGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Po gifted ni bathroom sink racks cosmetic finishing the desktop storage rack storage rack multilayer cosmetic box", "volume": "0" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DGHtI1LSTkT8cQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtYRq4CpblP9QdN7fIO%2FfuePoATgxvi%2FIzxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "27.36", "commission_num": "16", "commission_rate": "950.00", "commission_volume": "98.63", "item_location": "\u5b89\u5fbd \u5408\u80a5", "nick": "\u5c0f\u6dd8\u5668\u6570\u7801\u4e13\u8425\u5e97", "num_iid": "524132305508", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1n7Y5KVXXXXbrXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "65.45", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DHic0UBqpAC8cQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtYRq4CpblP9RRLBgaW5udaw%3D%3D&spm=2014.21524001.1.0", "title": "\u3010\u9001\u8033\u673a\u3011ZTE\/\u4e2d\u5174 L680 \u8001\u4eba\u624b\u673a\u76f4\u677f\u5927\u5c4f\u8001\u5e74\u4eba\u624b\u673a\u79fb\u52a8\u8001\u4eba\u673a", "volume": "46" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DZJ84lUUtbvwcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtHCKsJyty%2B5ug%2F1CLrsA%2Fu13FQD7%2F5c3ccSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "4.40", "commission_num": "29", "commission_rate": "50.00", "commission_volume": "113.39", "item_location": "\u5e7f\u4e1c \u6df1\u5733", "nick": "xinqidianshuma", "num_iid": "521272574890", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1Dw7mKpXXXXXcaXXXXXXXXXXX_!!0-item_pic.jpg", "price": "199.77", "seller_credit_score": "11", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D4OafhZA9ePccQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtHCKsJyty%2B5vGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "\u3010\u539f\u5c01\u73b0\u8d27\u9001\u8c6a\u793c\u3011Xiaomi\/\u5c0f\u7c73 \u7ea2\u7c73Note2 \u79fb\u52a8\u9ad8\u914d\u53cc\u7f51\u901a\u7248\u624b\u673a", "volume": "66" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DiD8GnMYXmbQcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpHWtasVmgTivxgQLcnTjRBN6v3IrxdvJB4cSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "8.40", "commission_num": "14", "commission_rate": "210.00", "commission_volume": "6.99", "item_location": "\u6c5f\u82cf \u65e0\u9521", "nick": "\u8fdb\u9686\u6570\u7801\u4e13\u8425\u5e97", "num_iid": "522729364785", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1RxBfIFXXXXXqXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "90.91", "seller_credit_score": "11", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DcV11CeENkBwcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGWaXDQ0tlQpHWtasVmgTivzGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "YEPEN \/ Fitch goods Care 900 pairs of cards dual standby standby button slim candybar practical student machine old phone", "volume": "78" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DaYO7M3R6N2UcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt5NwMoZfmQMEjQn1xaOOkT0HDm%2FNpYBCFcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "28.00", "commission_num": "38", "commission_rate": "350.00", "commission_volume": "307.12", "item_location": "\u5317\u4eac", "nick": "\u535a\u6d77\u5b87\u901a\u6570\u7801\u4e13\u8425\u5e97", "num_iid": "37333190422", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB14yW7KVXXXXcNXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "181.82", "seller_credit_score": "12", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DZZK6AcsUQpMcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt5NwMoZfmQME%2B5QowgvHJPA%3D%3D&spm=2014.21524001.1.0", "title": "Coolpad \/ Cool 8198T mobile version of 3G dual card dual standby 5 inches quad-core smartphone 800W pixels", "volume": "93" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DJTmWgAdTYmYcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1L5II0XhlGr2W4DMgDkNaHGbRbSymNw03IYULNg46oBA%3D&spm=2014.21524001.1.0", "commission": "21.16", "commission_num": "13", "commission_rate": "200.00", "commission_volume": "60.67", "item_location": "\u5e7f\u4e1c \u6df1\u5733", "nick": "\u4e2d\u79fb\u666e\u6cf0\u6570\u7801\u4e13\u8425\u5e97", "num_iid": "44235611719", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1quhnKVXXXXcKXpXXXXXXXXXX_!!0-item_pic.jpg", "price": "240.45", "seller_credit_score": "14", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D9rwIcSuOKUocQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1L5II0XhlGr3GDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Send Gifts rapid Huawei \/ Huawei glory Play 4X high version mobile 4G smartphones eight-core", "volume": "51" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DCAV9KSLmoIkcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmrb73wd2H52ndmgNyh2oRWED%2FIF5O366rxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "50.00", "commission_num": "5", "commission_rate": "200.00", "commission_volume": "46.85", "item_location": "\u5e7f\u4e1c \u6df1\u5733", "nick": "\u671d\u7fa4\u79d1\u6280", "num_iid": "520893489882", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1gnveKVXXXXXNXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "568.18", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DinII9sGymrAcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmrb73wd2H52lMdIp1rr4P3Q%3D%3D&spm=2014.21524001.1.0", "title": "Genuine fruit meter eight-core A9 Android smart large-screen ultra-thin dual card dual mobile Unicom 4G fingerprint to unlock the phone", "volume": "80" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D%2Bdm%2BGdhfPLccQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmPSDbBXR1e%2F7sWAb5TKu6JBstRGlp9v7jcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "119.98", "commission_num": "45", "commission_rate": "250.00", "commission_volume": "686.31", "item_location": "\u5e7f\u4e1c \u6df1\u5733", "nick": "\u4e09\u661f\u84dd\u6e2f\u4e13\u5356\u5e97", "num_iid": "44293211360", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB19g0.KXXXXXb5XFXXXXXXXXXX_!!0-item_pic.jpg", "price": "1090.68", "seller_credit_score": "11", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DphDjJOptkhIcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B5x%2BIUlGKNpXlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmPSDbBXR1e%2F4vfeUUl6%2F7pA%3D%3D&spm=2014.21524001.1.0", "title": "Spot steel holster send film", "volume": "56" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3De6z9nPQp%2FyIcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtot7e%2BJbFsnkCbnkVzElL2L8JxPYw6vrPxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "3.88", "commission_num": "4", "commission_rate": "500.00", "commission_volume": "8.04", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "\u6ce5\u7334\u5bb6", "num_iid": "524878216235", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1E22.KFXXXXa6XFXXXXXXXXXX_!!0-item_pic.jpg", "price": "17.64", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DL2BOML2tPcIcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtot7e%2BJbFsnkMlu5kMKse3g%3D%3D&spm=2014.21524001.1.0", "title": "2015 fall and winter clothes new Korean version of the thick loose high-necked pullover female spell color stripes knit shirt tide", "volume": "613" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DC7HGEUEGwc8cQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt%2BtVmYyaGdLHSbB5nhhPvb%2F1ys%2BYtGZZIxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "8.40", "commission_num": "24", "commission_rate": "500.00", "commission_volume": "61.78", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u4e00\u767e\u4e07\u800c\u5df2", "num_iid": "523335235283", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1hj0VJVXXXXbAXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "38.18", "seller_credit_score": "12", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DtN%2ByN44dgUAcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt%2BtVmYyaGdLFMdIp1rr4P3Q%3D%3D&spm=2014.21524001.1.0", "title": "South Korea Shopping Hitz Korean version was thin solid color half-high collar sweater pullover loose bat sleeves women", "volume": "890" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DfyViieGgVV8cQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmbZXbIx3t6AdNvWIIzrpDsBF%2BmlvJU2bxxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "10.80", "commission_num": "2", "commission_rate": "500.00", "commission_volume": "6.90", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u5f90\u7231\u519b0619", "num_iid": "524416602600", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1JxBxKFXXXXagXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "49.09", "seller_credit_score": "7", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DPQV8jgWQuoAcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmbZXbIx3t6Ac%2B5QowgvHJPA%3D%3D&spm=2014.21524001.1.0", "title": "\u3010\u5929\u5929\u7279\u4ef7\u3011\u5c0f\u9896\u5bb6\u97e9\u7248\u857e\u4e1d\u62fc\u63a5\u7eb1\u7f51\u8896\u5706\u9886\u957f\u8896\u4e2d\u957f\u6b3e\u5957\u5934\u6bdb\u8863\u5973", "volume": "583" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DTpL2vWbk%2F%2FscQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtXYlOCm5PBkNkZuBeaFNPhoAMhSZV%2BJmPxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "4.95", "commission_num": "15", "commission_rate": "500.00", "commission_volume": "53.02", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u6b27\u9633\u97e7574095772", "num_iid": "524407503278", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB18w3IKpXXXXcHXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "22.50", "seller_credit_score": "12", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DNms7qZyVb6scQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtXYlOCm5PBkMzNeYKK0PFBA%3D%3D&spm=2014.21524001.1.0", "title": "Small silver 2015 winter new Han Guofan simple rabbit Puff loose pullover female M111128", "volume": "871" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D3hACiQu2phMcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1sViS8HOUifBaWp0IO3X4qwtEfsY4Lg20cSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "9.90", "commission_num": "7", "commission_rate": "500.00", "commission_volume": "12.89", "item_location": "\u6d59\u6c5f \u5609\u5174", "nick": "\u6e05\u6668\u7684\u7af9\u5f71", "num_iid": "524310928919", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1vnkMKpXXXXaHXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "45.00", "seller_credit_score": "11", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DpDC4p4NapHMcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1sViS8HOUifDGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Ms. new winter sweater short paragraph plus thick velvet sweater fashion low collar hedging warm sweater bottoming shirt", "volume": "606" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DL5vM4wkvINwcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7ga9OlR9ZPyj%2B6R294dQFNUkk4u0F2lhLAcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "75.00", "commission_num": "382", "commission_rate": "600.00", "commission_volume": "9033.45", "item_location": "\u6d59\u6c5f \u5609\u5174", "nick": "\u6b27\u4e1d\u7490\u65d7\u8230\u5e97", "num_iid": "522216458286", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1L3T7KVXXXXXfXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "284.09", "seller_credit_score": "14", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DoiNdaojqhkIcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7ga9OlR9ZPyj%2FGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Ou Silu 2015 autumn and winter women&#39;s pure cashmere sweater sweet fashion beaded cashmere sweater and a half high collar Slim", "volume": "110" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DonnVg5LrElscQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmztGViJiCx5cPyb5RdPihAtf8I2%2BnHt0LxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "11.50", "commission_num": "7", "commission_rate": "500.00", "commission_volume": "12.96", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "jj\u5377\u5377\u5bb6", "num_iid": "524511685061", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1l6mCKFXXXXXDXpXXXXXXXXXX_!!0-item_pic.jpg", "price": "52.25", "seller_credit_score": "14", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DcRCMaUt5CbscQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYc8sviUM61dt3lgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmztGViJiCx5c5hDCuE8TSLA%3D%3D&spm=2014.21524001.1.0", "title": "2015 winter new high-necked sweater under slit bottoming long section of cultivating long-sleeved dress female waist was thin", "volume": "636" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dy7iytAZcl24cQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGfAfqEwaIqx0rIQsqSXA4l%2F0Eqez2ZlO6P0kCr3YbqfjIYULNg46oBA%3D&spm=2014.21524001.1.0", "commission": "34.90", "commission_num": "32", "commission_rate": "500.00", "commission_volume": "1833.32", "item_location": "\u56db\u5ddd \u6210\u90fd", "nick": "\u601d\u601d0117", "num_iid": "524205113068", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1LeYxKVXXXXazXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "158.64", "seller_credit_score": "16", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DUc7nHxRllBocQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGfAfqEwaIqx0rIQsqSXA4l9xKmPmpIKZsA%3D%3D&spm=2014.21524001.1.0", "title": "S women&#39;s European leg of the original home personality in the long section long-sleeved cotton cultivation was thin color stripe suit jacket female tide", "volume": "119" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Da5y5W2HmEQMcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rturORNBk%2BZXrFadQuNj5WC11ZMYKmQXKmcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "25.80", "commission_num": "30", "commission_rate": "1000.00", "commission_volume": "128.46", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "zhouhaizhi88", "num_iid": "524338507504", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1.rbHIFXXXXaIaXXXXXXXXXXX_!!0-item_pic.jpg", "price": "58.64", "seller_credit_score": "14", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DkI4cAyb1JPIcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rturORNBk%2BZXrGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "2015 new coat female Korean short paragraph Discounted padded cotton jacket winter coat bread pink dress tide", "volume": "1248" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D8901a%2BLJDigcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7gRVY3ulD4nPL6%2BboEDTFpllhfff72YUd3cSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "2.80", "commission_num": "11", "commission_rate": "500.00", "commission_volume": "30.41", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "tb588405_2012", "num_iid": "524544571501", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1Cn22KFXXXXcjXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "12.72", "seller_credit_score": "19", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DUdllhy8nUBccQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7gRVY3ulD4nPLGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "2015 winter new Korean version was thin long-sleeved baseball uniform patch letters long section of cotton padded jacket women", "volume": "938" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DAKpQLfNAjawcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmz0grPjT4f8%2FKC01BZyOxkzuodXoc%2F9C1xgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "19.90", "commission_num": "44", "commission_rate": "500.00", "commission_volume": "275.38", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "\u7d22\u83f2\u4e1d\u7eea", "num_iid": "522922874126", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1w26PJpXXXXaRXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "90.45", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DctPR%2BX1IcygcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmz0grPjT4f88zNeYKK0PFBA%3D%3D&spm=2014.21524001.1.0", "title": "2015 fall and winter clothes Korean bread big yards long section of thick hooded coat female loose casual feather padded", "volume": "2562" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D90OhP2IyoNgcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtsoklcTJ1qU4DUoJZe1SnFpGlFcOtgbDccSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "6.95", "commission_num": "4", "commission_rate": "500.00", "commission_volume": "26.99", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u541b\u541b\u5c4b2009", "num_iid": "524535088331", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1G1izKFXXXXafXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "31.59", "seller_credit_score": "14", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DkddBTESSCEAcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtsoklcTJ1qU7GDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "2015 Korean winter thick feather padded cotton long paragraph BF wind bread served hooded jacket coat large size women", "volume": "532" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DupPho5CKF%2FIcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7gyLHJK66fJplFez%2FZN6cpR4N8L6GUwfLgcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "16.40", "commission_num": "34", "commission_rate": "500.00", "commission_volume": "161.20", "item_location": "\u5317\u4eac", "nick": "21\u514b\u97e9\u7248\u5973\u88c5", "num_iid": "521618657482", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1fMZhIVXXXXcFaXXXXXXXXXXX_!!0-item_pic.jpg", "price": "74.55", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D6v2pf9N8dW8cQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7gyLHJK66fJpnGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Genuine 2015 new Korean version of casual cotton Slim Down Down a short section of large size women thick coat yrf", "volume": "717" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DgIxVglpwJZocQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtugiOf4hrIk00V30M024qUkbbRiMN8YYGxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "16.40", "commission_num": "13", "commission_rate": "500.00", "commission_volume": "92.89", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "saynice159156", "num_iid": "522203148764", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1vmuMJFXXXXbCXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "74.55", "seller_credit_score": "9", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DwMj%2B9xQ%2BL6YcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtugiOf4hrIk1RLBgaW5udaw%3D%3D&spm=2014.21524001.1.0", "title": "2015 winter new casual hooded cotton jacket Girls long section was thin loose thick feather padded tide", "volume": "644" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DIRCRd77jtYQcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGXVgnkcsD9uk0GvYe5ccZRJ1eQDc%2FMWM8Z8GyWWwRGjgcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "13.40", "commission_num": "106", "commission_rate": "500.00", "commission_volume": "1458.48", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "madoujia", "num_iid": "523366910014", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1VKZbGFXXXXXvXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "60.91", "seller_credit_score": "17", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DWJy1fMSnwrccQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGXVgnkcsD9uk0GvYe5ccZRLGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Momo custom big scarves in winter style woolen cape coat solid color Korean female W4414", "volume": "317" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Db8ZiSUa5HV0cQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm3MkiVCQ7yLeNN01foBpt77xpM%2FuRYBTBxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "9.95", "commission_num": "2", "commission_rate": "500.00", "commission_volume": "9.90", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u7487\u59d0\u7684\u5e971101", "num_iid": "524575225559", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB13FcuKVXXXXXpXpXXXXXXXXXX_!!0-item_pic.jpg", "price": "45.23", "seller_credit_score": "6", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dc9JO5VbcvJQcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm3MkiVCQ7yLe9Gf2zmUiveQ%3D%3D&spm=2014.21524001.1.0", "title": "2015 winter new Korean version tide loose cocoon clip cotton coat it thick woolen coat Girls long paragraph", "volume": "207" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Ds3%2F4spv1aBEcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmZktsD5vqf4S%2BhY6PEHa%2BskFIA6cxCGoExgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "69.80", "commission_num": "8", "commission_rate": "1000.00", "commission_volume": "149.41", "item_location": "\u6e56\u5357 \u682a\u6d32", "nick": "\u4f9d\u4f9d\u5e03\u820d\u97e9\u5c1a\u79c0", "num_iid": "524298340234", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1N7i5KVXXXXXTXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "158.64", "seller_credit_score": "9", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D1qbKZl212dEcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmZktsD5vqf4RMdIp1rr4P3Q%3D%3D&spm=2014.21524001.1.0", "title": "Woolen coat female winter wool coat long paragraph suit collar thickening Slim large size women&#39;s winter fashion woolen", "volume": "577" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D62wlz044HxYcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1tXLwCJyGok30TtrjMmdCvQyiL%2BZmrBRNIYULNg46oBA%3D&spm=2014.21524001.1.0", "commission": "18.45", "commission_num": "1", "commission_rate": "500.00", "commission_volume": "7.90", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u9177\u9177_2008", "num_iid": "524314986563", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1HK.AKpXXXXbkXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "83.86", "seller_credit_score": "12", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DKzkuiW49tcscQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1tXLwCJyGok1xKmPmpIKZsA%3D%3D&spm=2014.21524001.1.0", "title": "2015 new winter temperament Slim long woolen coat thick woolen coat long section of female knee", "volume": "357" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DcOgLc6VXgQQcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtd61Crnt298M3n8iwzcPwHzDzz7EXIU%2FMxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "69.40", "commission_num": "7", "commission_rate": "500.00", "commission_volume": "89.96", "item_location": "\u5317\u4eac", "nick": "\u51b0\u51b0\u7684\u7c89\u8272\u5c0f\u5c4b", "num_iid": "521547620522", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1w8QyJXXXXXaZXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "315.45", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dj%2FA%2Bh0dY184cQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtd61Crnt298M9peD8rCcfzw%3D%3D&spm=2014.21524001.1.0", "title": "\u3010\u5929\u5929\u7279\u4ef7\u3011\u4e2d\u8001\u5e74\u5973\u88c5\u7f8a\u7ed2\u5927\u8863\u4e2d\u957f\u6b3e\u4fee\u8eab\u5988\u5988\u88c5\u7f8a\u6bdb\u5462\u5b50\u5916\u5957", "volume": "177" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dp4h0Gucy52IcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtWhl8V9s8d2bdXg0F%2BSFthKsXbLUFNfIkxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "3.18", "commission_num": "29", "commission_rate": "1100.00", "commission_volume": "91.87", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u4e2b\u5934\u65e5\u7cfb\u97e9\u7248\u5973\u88c5", "num_iid": "523950746544", "pic_url": "http:\/\/image.taobao.com\/bao\/uploaded\/i1\/TB1ZzpeKpXXXXbqaXXXXXXXXXXX_!!2-item_pic.png", "price": "6.56", "seller_credit_score": "16", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D9SlUoeJh3E0cQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtWhl8V9s8d2bPZMUUR31Kpg%3D%3D&spm=2014.21524001.1.0", "title": "2015 Winter new Women Korean long paragraph Korean Fan loose silhouette woolen overcoats women W136", "volume": "590" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DFctHeIDO2PUcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt346psq1MnoygrPwXfpysc%2F%2FP1Q5U6%2B88cSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "54.20", "commission_num": "67", "commission_rate": "500.00", "commission_volume": "5213.13", "item_location": "\u5e7f\u4e1c \u6df1\u5733", "nick": "\u65e0\u7406\u5934jo", "num_iid": "523259908687", "pic_url": "http:\/\/image.taobao.com\/bao\/uploaded\/i7\/TB1Vxl_KpXXXXbGXXXXYXGcGpXX_M2.SS2", "price": "246.36", "seller_credit_score": "14", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D2dtW5sye8iIcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMbxkTkW0jAYct4hWD5k2kjPlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt346psq1MnozGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "RLL winter new minimalist gray and purple loose in the wild long-sleeved long section of wool woolen coat female coat", "volume": "380" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D2NVs9nBoJFQcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7gBzNUBkCzEpAfHgbg9bP%2FKi2ewNj5aXUucSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "19.00", "commission_num": "0", "commission_rate": "1000.00", "commission_volume": "0.00", "item_location": "\u798f\u5efa \u6cc9\u5dde", "nick": "\u900d\u9065\u7b71\u96c5", "num_iid": "525000569553", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1jWzoJVXXXXazXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "43.18", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DZBhWmKSTJHEcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7gBzNUBkCzEpDGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Young men in autumn and winter plus velvet warm cotton-padded shoes tide Korean men shoes heavy-bottomed elevator shoes child", "volume": "99" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Df4AHAKaoee8cQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt4JH0Z9SvA9MeEh2j%2BZ5Tlwc%2BPC9BtjP5xgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "1.92", "commission_num": "3", "commission_rate": "150.00", "commission_volume": "5.72", "item_location": "\u6d59\u6c5f \u6e29\u5dde", "nick": "\u767d\u5bb6\u7535\u5668\u5546\u57ce", "num_iid": "523981855232", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1kMIWFVXXXXb1aXXXXXXXXXXX_!!0-item_pic.jpg", "price": "29.09", "seller_credit_score": "9", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DT76dGdMwCNccQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rt4JH0Z9SvA9M5hDCuE8TSLA%3D%3D&spm=2014.21524001.1.0", "title": "Spring young men Korean version of casual shoes lace round high shoes male British men&#39;s tide leather boots Martin", "volume": "185" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DIppaQmyj5wgcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmpCt1tp2Zqhyn5pVB6a9RlilEcy4lstPZxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "56.36", "commission_num": "294", "commission_rate": "1950.00", "commission_volume": "4741.15", "item_location": "\u798f\u5efa \u6cc9\u5dde", "nick": "\u72ee\u51e1\u5c3c\u65d7\u8230\u5e97", "num_iid": "520000240084", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1yxYoHFXXXXXRXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "65.68", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D7vmdy6MyjI0cQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmpCt1tp2ZqhwzNeYKK0PFBA%3D%3D&spm=2014.21524001.1.0", "title": "Winter men&#39;s casual shoes male Korean tidal shoes max90 shoes cushion running shoes increased autumn lovers shoes", "volume": "1846" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DUiEzEJR4Q90cQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1STVXJva6TxuJZ%2BbRYY13T%2BeX%2BPUCZ8aZIYULNg46oBA%3D&spm=2014.21524001.1.0", "commission": "17.45", "commission_num": "495", "commission_rate": "250.00", "commission_volume": "1342.17", "item_location": "\u4e0a\u6d77", "nick": "\u65af\u7c73\u5c14\u65d7\u8230\u5e97", "num_iid": "40538365527", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1bXSgJpXXXXc0XVXXXXXXXXXX_!!0-item_pic.jpg", "price": "158.64", "seller_credit_score": "17", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dk0UuPxuq9NQcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUghwF9X9%2BT1STVXJva6TxvGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Simier Smil men&#39;s casual shoes autumn and winter men&#39;s leather casual shoes men shoes bulk of M 6783", "volume": "298" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dp%2F8guVencwccQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtgqoZjRaXQfKPPSxc7ZTeEXbGw9LxnKmgcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "3.90", "commission_num": "22", "commission_rate": "1000.00", "commission_volume": "55.50", "item_location": "\u5c71\u4e1c \u65e5\u7167", "nick": "tb3046188_11", "num_iid": "44345497288", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1AQNZKpXXXXaiXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "8.86", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DDDWakGP8va0cQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtgqoZjRaXQfK9Gf2zmUiveQ%3D%3D&spm=2014.21524001.1.0", "title": "The new spring and autumn casual men low shoes casual shoes popular entertainment business shoes men", "volume": "905" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D%2FODAQgygliscQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm4XC0k%2FZDJ4Iv7EE5Mwoz14VL47EdXTOIxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "48.51", "commission_num": "156", "commission_rate": "2450.00", "commission_volume": "2430.40", "item_location": "\u5317\u4eac", "nick": "\u54e5\u4f26\u98de\u6b65\u65d7\u8230\u5e97", "num_iid": "521221100327", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB18abxKVXXXXb7XFXXXXXXXXXX_!!0-item_pic.jpg", "price": "45.00", "seller_credit_score": "10", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DTPoZ7WbSi%2FEcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDm4XC0k%2FZDJ4JRLBgaW5udaw%3D%3D&spm=2014.21524001.1.0", "title": "The new autumn and winter Korean version of the trend of men&#39;s casual sports plus velvet cotton men&#39;s heavy-bottomed shoes jogging tour frosted", "volume": "1692" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D0LNQ7hCVE1QcQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7g%2FA5OcDUTsWip5fz2J6qlc20OmU0XlnwVcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "27.52", "commission_num": "186", "commission_rate": "400.00", "commission_volume": "1338.42", "item_location": "\u798f\u5efa \u53a6\u95e8", "nick": "\u9f99\u8054\u821c\u978b\u7c7b\u4e13\u8425\u5e97", "num_iid": "520843564048", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1_aj1KVXXXXacXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "156.36", "seller_credit_score": "12", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D%2BlAKj6JlD8EcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGaBvaD5gNm7g%2FA5OcDUTsWjGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "Germany Camel Active Men&#39;s casual shoes autumn and winter outdoor men&#39;s casual shoes, matte leather shoes men shoes", "volume": "468" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DpqUyCivHmOscQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmkrML3dYXaaUgx4fNVGVmw9WaOPnHi3whxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "119.76", "commission_num": "45", "commission_rate": "600.00", "commission_volume": "2323.22", "item_location": "\u5317\u4eac", "nick": "\u6cd5\u838e\u592b\u4eba\u65d7\u8230\u5e97", "num_iid": "522082461259", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB1Bk0EJFXXXXcrXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "453.64", "seller_credit_score": "9", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DF2Yqyu%2B5B3kcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmkrML3dYXaaUMlu5kMKse3g%3D%3D&spm=2014.21524001.1.0", "title": "Double-sided high-end handmade wool coat female cashmere coat female coat female woolen coat and long sections 2015 new", "volume": "511" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DkLxhpxSUfuIcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGfAfqEwaIqx08knJteWUYreZi9TexGCQpWXdlARvwV0xcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "16.50", "commission_num": "17", "commission_rate": "1000.00", "commission_volume": "429.60", "item_location": "\u5e7f\u4e1c \u6df1\u5733", "nick": "\u9b45\u529b\u65e0\u9650\u4e4b\u65f6\u5c1a", "num_iid": "522989706595", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1x5DQJVXXXXbIXFXXXXXXXXXX_!!0-item_pic.jpg", "price": "37.50", "seller_credit_score": "11", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DNN2%2B3Kvny4gcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGfAfqEwaIqx08knJteWUYrfGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "2015 new women&#39;s winter fashion woolen coat Slim was thin sweet quality in the long section woolen coat", "volume": "508" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DbigcItZnnq0cQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtumZoacF3B8dTtN%2BkQiiZoscC5dWgOUFCcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "3.74", "commission_num": "33", "commission_rate": "500.00", "commission_volume": "141.53", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "\u5e38\u6765\u6211\u4f1a\u7231\u4e0a\u4f60", "num_iid": "42160704870", "pic_url": "http:\/\/img03.taobaocdn.com\/bao\/uploaded\/i3\/TB1Kj1THpXXXXa5XFXXXXXXXXXX_!!0-item_pic.jpg", "price": "17.00", "seller_credit_score": "15", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DXGMfFGqtETAcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtumZoacF3B8e9Gf2zmUiveQ%3D%3D&spm=2014.21524001.1.0", "title": "2015 Korean version of the blockbuster recommended! New winter irregular geometric triangle graphic woolen coat jacket", "volume": "851" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DYn5%2BrSQXCXgcQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmTCWaAwk4h15819S2MRj5ebWStHZ%2FYcsOxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "79.50", "commission_num": "11", "commission_rate": "500.00", "commission_volume": "259.75", "item_location": "\u4e0a\u6d77", "nick": "\u6052\u6e90\u7965\u7279\u5356\u5546\u57ce", "num_iid": "523172687399", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB10FxUKpXXXXcyXpXXXXXXXXXX_!!0-item_pic.jpg", "price": "361.36", "seller_credit_score": "8", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DIFyFJ1K7vGUcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmTCWaAwk4h145hDCuE8TSLA%3D%3D&spm=2014.21524001.1.0", "title": "The EU force genuine purchasing 2015 new winter female solid color suit collar wool overcoats 1154343580", "volume": "751" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DJet5eh7DDpccQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmqRIuEg3I%2Bud0PihFJ48hAdN4vejr5uQHxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "15.54", "commission_num": "298", "commission_rate": "600.00", "commission_volume": "8869.79", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "omont\u670d\u9970\u65d7\u8230\u5e97", "num_iid": "523186023955", "pic_url": "http:\/\/img01.taobaocdn.com\/bao\/uploaded\/i1\/TB17JGgKXXXXXX8XpXXXXXXXXXX_!!0-item_pic.jpg", "price": "58.86", "seller_credit_score": "15", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3D8PFmu%2Fiw4bocQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGShhBSDimKDmqRIuEg3I%2BucMlu5kMKse3g%3D%3D&spm=2014.21524001.1.0", "title": "omont tarts home type A retro small lapel wool coat Girls long paragraph solid color coat fall and winter clothes spot", "volume": "89" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DFapnloFAOlscQipKwQzePOeEDrYVVa64yK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtRxZ757gZKMImw9aYz6rf4YXD0h%2Bb6PgHxgxdTc00KD8%3D&spm=2014.21524001.1.0", "commission": "18.76", "commission_num": "275", "commission_rate": "700.00", "commission_volume": "1833.93", "item_location": "\u6d59\u6c5f \u676d\u5dde", "nick": "\u7231\u4e3d\u4eba\u65d7\u8230\u5e97", "num_iid": "523091116193", "pic_url": "http:\/\/img02.taobaocdn.com\/bao\/uploaded\/i2\/TB1mzZBJVXXXXcYXVXXXXXXXXXX_!!0-item_pic.jpg", "price": "60.91", "seller_credit_score": "13", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dg5cawHkoyjkcQipKwQzePDAVflQIoZepyK8Cckff7TVRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGUPHynILb4rtRxZ757gZKMK9Gf2zmUiveQ%3D%3D&spm=2014.21524001.1.0", "title": "Aili NPC yards woolen coat female 2015 fall and winter clothes new Korean version of Slim temperament long section woolen coat", "volume": "695" }, { "click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3DP%2FTMZMPI05scQipKwQzePOeEDrYVVa64XoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGSQSpcOoyYGIPqLdCuun6D%2BZoGrT9Xut5MUx%2FtrPxicGcSpj5qSCmbA%3D&spm=2014.21524001.1.0", "commission": "29.95", "commission_num": "37", "commission_rate": "500.00", "commission_volume": "394.36", "item_location": "\u5e7f\u4e1c \u5e7f\u5dde", "nick": "linjou\u73b2", "num_iid": "522669287906", "pic_url": "http:\/\/img04.taobaocdn.com\/bao\/uploaded\/i4\/TB1jCseKXXXXXXVXXXXXXXXXXXX_!!0-item_pic.jpg", "price": "136.14", "seller_credit_score": "12", "shop_click_url": "http:\/\/s.click.taobao.com\/t?e=m%3D2%26s%3Dz9RW0AJrTEQcQipKwQzePDAVflQIoZepXoO8tOebS%2BdRAdhuF14FMYU741ucfB2%2B1aH1Hk3GeOjlgLddNI9mWAa7DzJF0AvYkUfunqtXL9qBoEHZXsbZGSQSpcOoyYGIPqLdCuun6D%2FGDF1NzTQoPw%3D%3D&spm=2014.21524001.1.0", "title": "linjou2015 new winter sweet wind cashmere double-breasted wool coat lapel loose coat thicker female", "volume": "120"}];
+    function sethots() {
+        hotpage = hotpage % 5;
+        var hothtml = '';
+        var hotindex = hotpage * 7;
+        var imagesize = '';
+        do {
+            imagesize = ($.inArray(hotindex % 7, [0, 3, 6]) != -1) ? '_200x200.jpg' : '_100x100.jpg';
+            try {
+                hothtml = '<a href="?taobao=show_1_' + hotgoods[hotindex]['num_iid'] + '" class="piccon"><img src="' + (hotgoods[hotindex]['pic_url'] + imagesize) + '"/></a>'
+                + '<div class="pricecon">'
+                + '<a style="color:#f47a20"> S$ ' + hotgoods[hotindex]['price'] + '</a>'
+                + '<div class="salescon">' + hotgoods[hotindex]['nick'] + '</div> '
+                + '<div class=\"titcon trans\">' + hotgoods[hotindex]['title'] + '</div>'
+                + '</div> ';
+                $("#modelhot .hostcontain").eq(hotindex % 7).html(hothtml)
+            } catch (e) { ; }
+        } while ((hotindex++) % 7 != 6);
+        $('.m_recommend_piccon>div').append($("#modelhot").html())
+        hotpage++;
+    }
+
+    //翻页
+    function setHotpage() {
+        hotpage = hotpage % 5;
+        $('#hotdetail').animate({ 'left': "-" + hotpage + "00%" });
+        $('#hotclick>li').removeClass('active');
+        $('#hotclick' + hotpage).addClass('active');
+        hotpage++;
+        hotpage = hotpage % 5;
+    }
+
+    //设置每页信息
+    sethots(); sethots(); sethots(); sethots(); sethots();
+    $('.m_recommend_piccon').append('<div style="clear:both;"></div>');
+
+    $('#hotclick>li').click(function () {
+        hotpage = $(this).data('value');
+        setHotpage();
+    });
+    var MyMar = false;
+    var speed = 5000; //播放速度
+    MyMar = setInterval(setHotpage, speed)
+    $('#hotclick,.m_recommend_piccon').each(function () {
+        this.onmouseover = function () { clearInterval(MyMar); MyMar = false; }
+        this.onmouseout = function () { MyMar = setInterval(setHotpage, speed); }
+    });
+</script>
+
+<div style="height:60px;"></div>
+<div class="clear"></div>
+<style>.footer_b a {
+	color : #000000;
+}
+</style>
+
+</div>
+<div class="shortcut footer" style="margin-top:13px; background-color:#f8f8f8;">
+        <div class="w" >
+            <div class="service_l" >
+
+               <ul class="foot_tool">
+
+
+					<li>
+
+    						<p><strong>新手指南</strong></p>
+                        						<p><a href="{% url 'q:content-68' %}">新用户注册</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-80' %}">关于我们</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>付款方式</strong></p>
+
+                        						<p><a href="{% url 'q:content-49' %}">国际信用卡</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-71' %}">支付宝付款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-74' %}">微信支付</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-87' %}">支付方式</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>配送相关</strong></p>
+
+                        						<p><a href="{% url 'q:content-51' %}">物流运费</a>
+						</p>
+
+
+                        						<p><a href={% url 'q:content-56' %}>海关及税项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-75' %}">重量计算法</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-77' %}">什么是敏感货</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-79' %}">大货商品</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-85' %}">空运服务</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-86' %}">海运服务</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>售后服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-54' %}">代购退换货政策</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-72' %}">收货注意事项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-73' %}">赔偿标准</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-78' %}">投诉意见箱</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>其他服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-57' %}">商品估重</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-58' %}">尺码换算</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-59' %}">测量帮助</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-65' %}">服务条款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-70' %}">邮政编码查询</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-88' %}">服务标准协议</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-89' %}">存仓有效期</a>
+						</p>
+
+
+</li>
+</ul>
+
+                <div class="fr two_code">
+
+                </div>
+                <div class="fr two_code code_margin">
+
+                </div>
+                <div class="cb">
+                </div>
+            </div>
+            <div class="footer_nav">
+
+                <div class="cb">
+                </div>
+            </div>
+
+
+
+
+      <!--      <div class="links">
+
+            </div>
+            <p class="ft_panli_about">
+               </p>-->
+        </div>
+        <div class="foot2">
+   <div class="foot2_1">
+
+  </div>
+</div>
+    </div>
+
+
+<!--代码部分begin-->
+<script>
+    $(function () {
+        $("#aFloatTools_Show").click(function () {
+            $('#divFloatToolsView').animate({ width: 'show', opacity: 'show' }, 100, function () { $('#divFloatToolsView').show(); });
+            $('#aFloatTools_Show').hide();
+            $('#aFloatTools_Hide').show();
+        });
+        $("#aFloatTools_Hide").click(function () {
+            $('#divFloatToolsView').animate({ width: 'hide', opacity: 'hide' }, 100, function () { $('#divFloatToolsView').hide(); });
+            $('#aFloatTools_Show').show();
+            $('#aFloatTools_Hide').hide();
+        });
+    });
+</script>
+<!--代码部分end-->
+<script src="/static/templets/aigou/artdialog/artDialog-skin=blue.js"></script>
+<script src="/static/templets/aigou/artdialog/plugins/iframeTools-skin=blue.js"></script>
+
+
+
+
+
+<div id="backToTop" style="line-height: 60px;display:block;width:60px;height:60px;position:fixed;right:5px;background-color:#BFBFBF;cursor: pointer;z-index:999;bottom:30px;" onclick="gobackTop();" align="center">&nbsp;<img src="/static/templets/aigou/images/Top.png">&nbsp;</div>
+
+<script type="text/javascript">
+    function gobackTop() {
+        if ($(document).scrollTop() == 0) return false;
+        $('html,body').animate({ scrollTop: 0 }, 800);
+    }
+</script>
+
+
+
+
+</body></html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加帮助</title>
+
+    <script src="/static/tiny_mce/tiny_mce.js"></script>
+<script>
+    tinyMCE.init({
+        'mode':'textareas',
+        'theme':'advanced',
+        'width':450,
+        'height':300
+    })
+</script>
+</head>
+<body>
+<form action="{% url 'h:add_action' %}" method="post" name="addhelp">
+    {%  csrf_token %}
+    {% if article %}
+        <input type="hidden" name="a_id" value="{{ article.id }}">
+    <label>帮助标题
+        <input type="text" name="title" value="{{ article.title }}"/>
+    </label>
+    <br/>
+    <label>帮助内容
+{#        <input type="text" name="content" value="{{ article.content }}"/>#}
+        <textarea name="content" style="width: 500px;height: 500px">{{ article.content }}</textarea>
+    </label>
+    <br/>
+    {% else %}
+        <input type="hidden" name="a_id" value="{{ article.id }}">
+        <label>帮助标题
+        <input type="text" name="title" />
+    </label>
+    <br/>
+    <label>帮助内容
+{#        <input type="text" name="content" value="{{ article.content }}"/>#}
+        <textarea name="content" style="width: 500px;height: 500px"></textarea>
+    </label>
+    <br/>
+    {% endif %}
+    <br/>
+    <a href="#" onClick="addhelp.submit();">提交</a>
+</form>
+</body>
+<style>
+    .rich_text{
+    font-size: 14px;
+    color: #222222;
+    line-height: 22px;
+    border: 1px solid #e5e5e5;
+    padding: 6px 10px;
+}
+.rich_text span{
+    font-size: 18px;
+    color: #ff3300;
+}
+.rich_text strong{
+    font-size: 14px;
+    color: #ff3300;
+}
+.rich_text em{
+    color: #4359aa;
+}
+</style>
+</html>

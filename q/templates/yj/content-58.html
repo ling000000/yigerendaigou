@@ -1,0 +1,1874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0025)http://www.yoybuy.com/cn/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="language" content="ch">
+    <meta http-equiv="language" content="ch">
+    <link rel="shortcut icon" href="/static/templets/aigou/images/favicon.ico" type="image/x-icon">
+    <title>尺码换算 </title>
+    <meta name="description" content="">
+    <link href="/static/templets/aigou/css/user.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/static/templets/aigou/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/analytics.js"></script>
+    <script src="/static/templets/aigou/js/bat.js"></script>
+    <script src="/static/templets/aigou/js/analytics.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/jquery.roundabout-1.0.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/livechat.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/headnew.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/roundtrip.js"></script>
+    <script type="text/javascript" src="/static/templets/aigou/js/getproduct.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <link href="/static/templets/aigou/css/main.min.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/default.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/cnindexnew.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"  src="/static/templets/aigou/js/headnew.js"></script>
+        	<script type="text/javascript">
+
+        	    $(function () {
+        	        var langobj = getCookie('lang');
+        	        var lang = "ch";
+        	        if (langobj != null) {
+        	            lang = langobj.substr(2, 2);
+        	            if (lang == "en") {
+        	                $(".lang").val("en");
+        	            }
+        	            else {
+        	                $(".lang").val("ch");
+        	            }
+
+        	        }
+        	        else {
+        	            $(".lang").val("ch");
+        	            lang = "ch";
+        	        }
+        	        $(".lang").click(function () {
+        	            var lst = "ch";
+        	            if ($(".lang").text() == "English") {
+        	                lst = "en";
+        	                $(".lang").text("中文");
+        	            }
+        	            $.ajax({
+        	                type: "POST",
+        	                url: "/Tools/jsonregister.ashx?action=lang",
+        	                data: "lstr=" + lst,
+        	                success: function (msg) {
+        	                    location.reload();
+        	                }
+        	            });
+
+        	        });
+
+
+        	    });
+
+        	    function getCookie(name)//取cookies函数
+        	    {
+        	        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+
+        	        if (arr != null) return unescape(arr[2]); return null;
+
+        	    }
+
+</script>
+
+
+
+
+    <header class="">
+         <div class="shortcut" style="z-index:400; background-color:#f8f8f8;" >
+             <div class="w top_nav">
+                 <ul class="fl login">
+
+               <!-- <li><span style="margin-right:30px; cursor:pointer;" class="lang" >English</span></li>-->
+
+                 <li  style="margin-right:20px;">CNY : MRY = &nbsp;<b style="color:#f47a20;">1 : 1.58</b></li>
+                 <li  style="margin-right:20px;">CNY : SGD = &nbsp;<b style="color:#f47a20;">1 : 4.6</b></li>
+                 </ul>
+                 <ul class="fr">
+
+
+{% if not u %}
+                         <li><span class="login_t"><a href="userindexs.html" > {{ user.username }}</a>&nbsp;&nbsp;|</span>
+                             <a href="{% url 'q:logout' %}" >退出</a>&nbsp;&nbsp;|</li>
+                     {% else %}
+                         <li><a href="{% url 'q:login' %}" style="font-size:12px;">登录&nbsp;&nbsp;|</a></li>
+                         <li><a href="{% url 'q:do_reg' %}" style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;注册&nbsp;&nbsp;|</a></li>
+                     {% endif %}
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:daicai' %}" target="_blank" rel="nofollow"><i class=" icon_shop"></i>购物车<em class="top_red ShoppingNum"></em></a>&nbsp;&nbsp;|</li>
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:userindex' %}" rel="nofollow"><i class=" icon_u"></i>用户中心</a></li>
+                    <!-- <li class="fore"><a href="addzyorder.html" id="shoppingCart" rel="nofollow"><i class="icon_m icon_my"></i><span><em>我的仓库</em><em class="none gerenc">&nbsp;&nbsp;&nbsp;&nbsp;</em></span><em class="top_red OrderNum"></em></a></li>-->
+
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+
+         <div class="w por header-logo" style="height: 120px;"  >
+             <style>
+             .kefu{float:right;margin-top: 15px;margin-right: 20px;}
+             .kefu ul li{ float:left;}
+             </style>
+
+                <div class="logo-wrap logo" align="center">
+                        <a  href="{% url 'q:index' %}"><font size="6" color="#6495ed">新领域国际物流</font></a>
+                 </div>
+
+
+
+             <div class="search-wrap search" style="margin-top:30px;">
+<form action="{% url 'q:addurl' %}" method="post" name="addurl">
+                     {% csrf_token %}
+                     <input type="text" id="Text1" class="fl search_text head-search-text" style="width:448px;padding-left:2px;" name="goods_url" autofocus="true" placeholder="请输入商品的关键词或商品的链接" value="{{ article.goods_url }}"/>
+                     <span class="fl button " onclick="addurl.submit()" id="headSearch"><span class="search-val-text" >代购</span></span>
+                 </form>
+                 <span class="fl" style="margin-left: 50px;margin-top: -5px;">
+
+                     <div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1493651104050">
+                     </div>
+                     <script>    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                 </span>
+
+             </div>
+             <div class="cb"></div>
+             <div class="kefu">
+
+               </div>
+         </div>
+
+            <div class="shortcut" id="nav_list" style="height:54px;">
+             <div class="w">
+                 <ul class="nav clearfix">
+                     <li class="on" ><a href="{% url 'q:index' %}" class="nav_l" style="height:54px; margin-bottom:2px; margin-top:-1px; margin-left:-1px; ">首页</a></li>
+                     <!--<li class="zhidemai" ><a href="golist-650-0.html" class="nav_l">热门商品</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-80' %}" class="nav_l">关于我们</a>
+                    <ul>
+      <li><a href="{% url 'q:content-68' %}">新用户注册</a></li>
+      <li><a href="{% url 'q:content-73' %}">赔偿标准</a></li>
+      <li><a href="{% url 'q:content-65' %}">服务条款</a></li>
+      </ul>
+                     </li>
+                      <li class="zhidemai" ><a href="{% url 'q:addurl' %}" class="nav_l">代购</a>
+                        <!-- <ul>
+      <li><a href="/content-68.html">新用户注册</a></li>-->
+     <!-- <li><a href="/content-25.html">承运条款</a></li>-->
+
+      <!--</ul>-->
+                      </li>
+{#                     <li class="zhidemai" ><a href="http://www.kuaidi100.com/?from=openv" class="nav_l">物流跟踪</a>#}
+{#                     <ul>#}
+{#                     <li><a href="#">包裹查询</a></li>#}
+{#      <li><a href="#">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+{#       </ul>#}
+{#                     </li>#}
+                                          <li class="zhidemai" ><a href="#" class="nav_l">物流跟踪</a>
+                     <ul>
+                     <li><a href="{% url 'q:packagesearch' %}">包裹查询</a></li>
+{#      <li><a href="#">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+       </ul>
+                     </li>
+
+                     <li class="zhidemai" ><a href="{% url 'q:content-85' %}" class="nav_l">空运服务</a>
+
+       <!--              <ul>
+      <li><a href="/content-5.html"">空运费用</a></li>
+      <li><a href="/content-4.html">空运计费重量</a></li>
+      <li><a href="/content-22.html">不能承运货件</a></li>
+      <li><a href="/content-25.html">承运条款</a></li>
+
+      </ul>   -->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-86' %}" class="nav_l" >海运服务</a>
+                     <!-- <ul>
+            <li><a href="content-32.html">海运服务说明</a></li>
+        </ul>-->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-87' %}" class="nav_l">支付方式</a>
+
+                     <!--<ul>
+      <li><a href="/content-47.html"">支付宝支付</a></li>
+      <li><a href="/content-48.html">中国银行汇款</a></li>
+      </ul>-->
+                     </li>
+                    <!-- <li class="zhidemai" ><a href="/content-80.html" class="nav_l">常见问题</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-53' %}" class="nav_l">联系我们</a></li>
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+</header>
+        <style>#guzz{ display:none; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:#ccc; z-index:100;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
+#guzz img{ position:fixed; top:40%; left:0; right:0; bottom:auto; margin:0 auto; }
+.spinner {
+  margin: 100px auto;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+ 
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+ 
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+ 
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+ 
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+ 
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+ 
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+ 
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+ 
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+ 
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+ 
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+ 
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+ 
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+</style>
+
+<div id="guzz">
+<!--<img src="/templets/aigou/images/jjz.gif" />-->
+<div style=" position:absolute; top:30%; left:0; right:0; bottom:auto;">
+<div class="spinner">
+  <div class="spinner-container container1">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container2">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container3">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".search_but").click(function () {
+            var val = $(this).prev().val();
+            if (val != '') {
+                $("#guzz").show();
+                sendgoods();
+            }
+        })
+
+    });
+    function sendgoods() {
+        if ($("#_searchURL").val() != "") {
+            $("#guzz").show();
+            $("#searchURL").submit();
+        }
+    }
+
+    function sendgoods2() {
+        if ($("#_hidesearchURL").val() != "") {
+            $("#guzz").show();
+            $("#hidesearchURL").submit();
+        }
+    }
+
+</script>
+
+
+        
+
+        <div id="container" style="background-color:#fff;">
+            <div id="content">
+                <div class="top_nav" id="top_nav"><a href="{% url 'q:index' %}">首页</a>&gt;<span>  尺码换算 </span></div>
+
+                <h2 class="tit_global"><span>尺码换算</span></h2>
+                <div class="faq_content">
+                    <table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				衣服尺寸换算参考</th>
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				文胸尺寸换算参考</th>
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				鞋码换算参考</th>
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡换算表</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.99ygo.com/index.html" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;">女装(外套,裙子,T-恤衫,夹克衫,套装)</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s5" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">女士文胸 - 胸围大小</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s3" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">鞋码换算参考</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s4" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">长度</a></td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.99ygo.com/index.html" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;">男装(外套,衬衫,西服)</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s9" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">女鞋</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s10" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">男鞋</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s11" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">面积</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.99ygo.com/index.html" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;">男装(衬衫)</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s7" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">内衣尺寸</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s12" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">体积/容量</a></td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.99ygo.com/index.html" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;">男装(休闲裤)</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s8" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">男士内裤尺寸</a></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<a href="http://www.sgshop.com.my/#s13" style="margin: 0px; padding: 0px; list-style: none; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" title="">重量</a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s1" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		女装(外套, 裙子, 内衣, 上衣, 套装)</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="5" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				160-165 / 84-86</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				165-170 / 88-90</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				167-172 / 92-96</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				168-173 / 98-102</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				170-176 / 106-110</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">国际</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XS</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				S</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				M</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				L</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XL</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">美国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				2</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				4-6</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8-10</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				12-14</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				16-18</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">欧洲</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				34</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				34-36</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38-40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s2" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		男装(外套,衬衫,西服)</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="5" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				165 / 88-90</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				170 / 96-98</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				175 / 108-110</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				180 / 118-122</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				185 / 126-130</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">国际</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				S</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				M</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				L</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XXL</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s3" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		男装(衬衫)</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="5" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				36 - 37</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38 - 39</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40 - 42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				43 - 44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				45 - 47</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">国际</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				S</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				M</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				L</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XXL</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s4" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		男装(休闲裤)</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="5" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">尺寸</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				46</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				48</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				50</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">腰围</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				68 - 72 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				71 - 76 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				75 - 80 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				79 - 84 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				83 - 88 cm</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">裤子长度</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				99 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				101.5 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				104 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				106.5 cm</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				109 cm</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s5" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		男装(休闲裤)</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="14" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				76.2</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				81.3</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				86.4</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				91.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				96.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				101.6</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				106.7</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				112</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				117</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				122</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				127</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				132</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				137</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				142</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">美国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				30</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				32</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				34</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				36</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				46</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				48</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				50</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				52</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				54</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				56</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">英国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				30</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				32</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				34</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				36</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				46</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				48</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				50</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				52</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				54</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				56</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">欧洲</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				70</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				75</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				80</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				85</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				90</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">法国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				85</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				90</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				95</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				100</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				105</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">意大利</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				2</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				3</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				4</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s6" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		女士文胸 - 胸围大小</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="14" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				A</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				B</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				C</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				D</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				E</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">美国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				AA</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				A</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				B</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				C</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				D</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				DD</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				DDD/E</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				F</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				FF</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				G</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				GG</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				H</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				HH</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				J</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">英国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				AA</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				A</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				B</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				C</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				D</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				DD</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				E</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				F</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				FF</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				G</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				GG</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				H</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				HH</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				J</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">欧洲</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				AA</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				A</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				B</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				C</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				D</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				E</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				F</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">法国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				AA</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				A</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				B</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				C</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				D</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				E</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				F</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">意大利</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				B</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				B或none</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				C</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				D</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				DD</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				E</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				F</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s7" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		内衣尺寸</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="7" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				S</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				M</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				L</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XXL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XXXL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				&nbsp;</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">国际</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XS</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				S</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				M</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				L</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XXL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XXXL</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">美国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				2</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				4</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				10</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				12</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				14</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">英国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				10</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				12</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				14</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				16</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				18</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">欧洲</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				32</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				34</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				36</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">法国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				34</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				36</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				46</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">意大利</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				46</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				48</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				50</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s8" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		男士内裤尺寸</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				度量衡标准</th>
+			<th colspan="5" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				尺寸/尺码详情</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				72 - 76</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				76 - 81</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				81 - 87</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				87 - 93</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				93 - 98</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">国际</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				S</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				M</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				L</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XL</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				XXL</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">美国 (英寸)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				28 - 30</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				30 - 32</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				32 - 34</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				34 - 38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38 - 42</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s9" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		女鞋</caption>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">英尺长 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				22.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				23</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				23.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				24</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				24.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				25</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				25.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				26</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				35</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				36</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				37</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				39</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				39</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">美国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				5.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8.5</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">英国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				4</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				4.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				5.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7.5</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">欧洲</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				35</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				36</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				37</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				38</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				39</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				39</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s10" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		男鞋</caption>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">英尺长 (厘米)</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				24.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				25</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				25.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				26</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				26.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				27</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				27.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				28</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">中国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				39</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				41</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				43</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				45</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				46</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">美国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				9</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				9.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				10</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				10.5</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">英国</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				7.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				8.5</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				9</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				9.5</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				<b style="margin: 0px; padding: 0px; list-style: none;">欧洲</b></td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				39</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				40</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				41</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				42</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				43</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				44</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				45</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				46</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s11" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		长 度 Length</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th colspan="2" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				Imperial 英制</th>
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				Metric 公制</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 inch [in] 英寸</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				----------</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				2.54 cm 厘米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 foot [ft] 英尺</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				12 in 英寸</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.3048 m 米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 yard [yd] 码</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				3 foot 英尺</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.9144 m 米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 mile 英里</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1760 yd 码</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1.6093 km 千米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 int nautical mile 海里</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				2025.4 yd 码</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1.853 km 千米</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s12" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		面 积 Area</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th colspan="2" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				Imperial 英制</th>
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				Metric 公制</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 sq inch [in2] 平方英寸</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				----------</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6.4516 cm2 平方厘米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 sq foot [ft2] 平方英尺</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				144 in2 平方英寸</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.0929 m2 平方米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 sq yd [yd2] 平方码</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				9 ft2 平方英尺</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.8361 m2 平方米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 acre 英亩</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				4840 yd2 平方码</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				4046.9 m2 平方米</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 sq mile [mile2] 平方英</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				640 acres 英亩</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				2.59 km2 平方千米</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption id="s13" style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		体 积 / 容 量 Volume/Capacity</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th colspan="2" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				USA measure 美制</th>
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				Metric 公制</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 fluid ounce 液量盎司</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1.0408 UK fl oz 英制液量盎司</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				29.574 ml 毫升</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 pint (16 fl oz 液量品脱 ) 品脱</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.8327 UK pt 英制品脱</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.4731 l 升</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 gallon 加仑</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.8327 UK gal 英加仑</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				3.7854 l 升</td>
+		</tr>
+	</tbody>
+</table>
+<table class="size-conversion" style="margin: 0px auto; padding: 0px; list-style: none; border-collapse: collapse; border-spacing: 0px; width: 940px; color: rgb(51, 51, 51); line-height: 30px; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; box-shadow: rgb(204, 204, 204) 1px 2px 8px;">
+	<caption style="margin: 10px 0px 0px; padding: 0px; list-style: none; text-align: left; color: rgb(244, 122, 32);">
+		重 量 Weight</caption>
+	<thead style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<th colspan="2" style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				Imperial 英制</th>
+			<th style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204); background: rgb(217, 217, 217);">
+				Metric 公制</th>
+		</tr>
+	</thead>
+	<tbody style="margin: 0px; padding: 0px; list-style: none;">
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 ounce [oz] 盎司</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				437.5 grain 格令</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				28.35 g 克</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 pound [lb] 磅</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				16 oz 盎司</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				0.4536 kg 千克</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 stone 口石</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				14 lb. 磅</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				6.3503 kg 千克</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 hundredweight [cwt] 英担</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				112 lb. 磅</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				50.802 kg 千克</td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; list-style: none;">
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1 long ton (UK) 长吨</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				20 cwt 英担</td>
+			<td style="margin: 0px; padding: 0px; list-style: none; text-align: center; border-style: solid; border-color: rgb(204, 204, 204);">
+				1.016 t 吨<br />
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+			
+			<!-- 返回顶部 -->
+		</div>
+
+
+		<!-- footer -->
+		
+        <div class="shortcut footer" style="margin-top:13px; background-color:#f8f8f8;">
+        <div class="w" >
+            <div class="service_l" >
+            
+               <ul class="foot_tool">
+
+
+					<li>
+
+    						<p><strong>新手指南</strong></p>
+                        						<p><a href="{% url 'q:content-68' %}">新用户注册</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-80' %}">关于我们</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>付款方式</strong></p>
+
+                        						<p><a href="{% url 'q:content-49' %}">国际信用卡</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-71' %}">支付宝付款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-74' %}">微信支付</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-87' %}">支付方式</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>配送相关</strong></p>
+
+                        						<p><a href="{% url 'q:content-51' %}">物流运费</a>
+						</p>
+
+
+                        						<p><a href={% url 'q:content-56' %}>海关及税项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-75' %}">重量计算法</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-77' %}">什么是敏感货</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-79' %}">大货商品</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-85' %}">空运服务</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-86' %}">海运服务</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>售后服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-54' %}">代购退换货政策</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-72' %}">收货注意事项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-73' %}">赔偿标准</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-78' %}">投诉意见箱</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>其他服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-57' %}">商品估重</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-58' %}">尺码换算</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-59' %}">测量帮助</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-65' %}">服务条款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-70' %}">邮政编码查询</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-88' %}">服务标准协议</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-89' %}">存仓有效期</a>
+						</p>
+
+
+</li>
+</ul>
+
+                <div class="fr two_code">
+                    
+                </div>
+                <div class="fr two_code code_margin">
+                    
+                </div>
+                <div class="cb">
+                </div>
+            </div>
+            <div class="footer_nav">
+                
+                <div class="cb">
+                </div>
+            </div>
+           
+               
+
+          
+      <!--      <div class="links">
+                
+            </div>
+            <p class="ft_panli_about">
+               </p>-->
+        </div>
+        <div class="foot2">
+   <div class="foot2_1">
+
+  </div>
+</div>
+    </div>
+
+      
+<!--代码部分begin-->
+<script>
+    $(function () {
+        $("#aFloatTools_Show").click(function () {
+            $('#divFloatToolsView').animate({ width: 'show', opacity: 'show' }, 100, function () { $('#divFloatToolsView').show(); });
+            $('#aFloatTools_Show').hide();
+            $('#aFloatTools_Hide').show();
+        });
+        $("#aFloatTools_Hide").click(function () {
+            $('#divFloatToolsView').animate({ width: 'hide', opacity: 'hide' }, 100, function () { $('#divFloatToolsView').hide(); });
+            $('#aFloatTools_Show').show();
+            $('#aFloatTools_Hide').hide();
+        });
+    });
+</script>
+<!--代码部分end-->
+<script src="templets/aigou/artdialog/artDialog-skin=blue.js"></script>
+<script src="templets/aigou/artdialog/plugins/iframeTools-skin=blue.js"></script>
+
+
+	</body>
+
+</html>

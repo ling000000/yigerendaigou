@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帮助详情</title>
+</head>
+<body>
+<h1>{{ article.title }}</h1>
+<br/>
+<h1>{{ article.content }}</h1>
+<br/>
+<a href="{% url 'h:addhelp' article.id %}">修改</a>
+
+</body>
+</html>

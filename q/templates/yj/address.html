@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的地址</title>
+</head>
+<body>
+<form action="{% url 'q:ad_re' %}" method="post">
+    {%  csrf_token %}
+{#    <label>详细地址#}
+{#        <input type="text" name="difang" value="{{ x.difang }}"/>#}
+{#    </label>#}
+{#    <br/>#}
+{#    <label>收件人姓名#}
+{#        <input type="text" name="name" value="{{ x.name }}"/>#}
+{#    </label>#}
+{#    <br/>#}
+{#    <label>电子邮箱#}
+{#        <input type="text" name="email" value="{{ x.email }}"/>#}
+{#    </label>#}
+{#    <br/>#}
+{#        <label>邮政编码#}
+{#        <input type="text" name="mailnum" value="{{ x.mailnum }}"/>#}
+{#    </label>#}
+{#    <br/>#}
+{#        <label>收件人手机号码#}
+{#        <input type="text" name="phone" value="{{ x.phone }}"/>#}
+{#    </label>#}
+{#    <br/>#}
+{#    <input type="submit" value="新增收货地址">#}
+    <input type="text" name="country" value="{{ error }}" disabled="disabled" style= "color:red;border:0px;background:none;height:25px; font-size:25px;" />
+
+                  <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+                <tbody><tr style="height:28px;">
+{#                  <td align="right" bgcolor="#ffffff">配送区域：</td>#}
+{#                  <td bgcolor="#ffffff" colspan="3">#}
+{#       <select name="country" id="country" onchange="selectArea()"><option value="0" selected="selected">请选择地区</option><option value="1" >Ｍalaysia（西马）</option><option value="18" >Ｍalaysia（东马）</option><option value="46" >Singapore</option></select>#}
+       <!-- <select name="area[]" onclick="selectArea(this,1)">
+                        <option value="1"  selected="selected">
+              Malaysia            </option>
+                        <option value="14" >
+              Singapore            </option>
+                        <option value="20" >
+              美国USA            </option>
+                        <option value="21" >
+              泰国Thailand            </option>
+                      </select>
+                      <select name="area[]" onclick="selectArea(this,1)">
+                        <option value="1"  selected="selected">
+              Malaysia            </option>
+                        <option value="14" >
+              Singapore            </option>
+                        <option value="20" >
+              美国USA            </option>
+                        <option value="21" >
+              泰国Thailand            </option>
+                      </select>-->
+{#    (必填)</td>#}
+                </tr>
+                <tr style="height:28px;">
+                  <td align="right" bgcolor="#ffffff">收货人姓名：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="name" type="text" class="inputBg" id="txtusername" value="">
+                  (必填) </td>
+                  <td align="right" bgcolor="#ffffff">电子邮件地址：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="email" type="text" class="inputBg" id="txtEmail" value="">
+                  </td>
+                </tr>
+                <tr style="height:28px;">
+                  <td align="right" bgcolor="#ffffff">邮政编码：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="mailnum" type="text" class="inputBg" id="txtPostcode" value="">(必填)</td>
+
+                  <td align="right" bgcolor="#ffffff">手机：</td>
+                  <td align="left" bgcolor="#ffffff"><input name="phone" type="text" class="inputBg" id="txtcellphone" value="">(必填)</td>
+
+                  </td>
+
+                </tr>
+             <!--   <tr style="height:28px;">
+                   <td align="right" bgcolor="#ffffff">电话：</td>
+                  <td align="left" bgcolor="#ffffff"  colspan="3"><input name="txttelphone" type="text" class="inputBg" id="txttelphone" value="">
+                </tr>-->
+                <tr style="height:28px;">
+                 <td align="right" bgcolor="#ffffff">详细地址：</td>
+                  <td align="left" bgcolor="#ffffff" colspan="3"><textarea name="difang" type="text" cols="40" rows="5" class="required"  id="txtAddress"  minlength="3" size="80"></textarea>
+                  (必填)</td>
+                </tr>
+                <tr style="height:38px;">
+                  <td align="right" bgcolor="#ffffff">&nbsp;</td>
+                  <td colspan="3" align="center" bgcolor="#ffffff">
+                   <input type="submit" name="submit" class="bnt_blue_2" value="新增收货地址"/>
+                   <input type="hidden" name="act" value="adduseraddress">
+                    <input name="step" type="hidden" value="add_address">
+                  </td>
+                </tr>
+              </tbody></table>
+
+</form>
+</body>
+</html>

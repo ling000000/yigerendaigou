@@ -1,0 +1,857 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="language" content="ch">
+		<meta http-equiv="language" content="ch">
+
+		<link rel="shortcut icon" href="/static/templets/aigou/images/favicon.ico" type="image/x-icon">
+		<title> 我的订单</title>
+        <meta name="keywords" content="" />
+		<meta name="description" content="">
+
+		<link href="/static/templets/aigou/css/user.css" rel="stylesheet" type="text/css">
+		<link href="/static/templets/aigou/css/global.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="/static/templets/aigou/js/jquery-1.5.1.min.js"></script>
+		<script  type="text/javascript"  src="/static/templets/aigou/js/analytics.js"></script>
+		<script src="/static/templets/aigou/js/bat.js" ></script>
+		<script src="/static/templets/aigou/js/analytics.js"></script>
+
+		<script type="text/javascript"  src="/static/templets/aigou/js/jquery.roundabout-1.0.js"></script>
+		<script type="text/javascript"  src="/static/templets/aigou/js/livechat.js"></script>
+		<script type="text/javascript"  src="/static/templets/aigou/js/headnew.js"></script>
+		<script type="text/javascript" src="/static/templets/aigou/js/roundtrip.js"></script>
+		<script type="text/javascript" src="/static/templets/aigou/js/getproduct.js"></script>
+
+	</head>
+
+	<body>
+
+
+    <div id="wrap">
+          <!-- header -->
+             <link href="/static/templets/aigou/css/main.min.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/default.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/cnindexnew.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"  src="/static/templets/aigou/js/headnew.js"></script>
+        	<script type="text/javascript">
+
+        	    $(function () {
+        	        var langobj = getCookie('lang');
+        	        var lang = "ch";
+        	        if (langobj != null) {
+        	            lang = langobj.substr(2, 2);
+        	            if (lang == "en") {
+        	                $(".lang").val("en");
+        	            }
+        	            else {
+        	                $(".lang").val("ch");
+        	            }
+
+        	        }
+        	        else {
+        	            $(".lang").val("ch");
+        	            lang = "ch";
+        	        }
+        	        $(".lang").click(function () {
+        	            var lst = "ch";
+        	            if ($(".lang").text() == "English") {
+        	                lst = "en";
+        	                $(".lang").text("中文");
+        	            }
+        	            $.ajax({
+        	                type: "POST",
+        	                url: "/Tools/jsonregister.ashx?action=lang",
+        	                data: "lstr=" + lst,
+        	                success: function (msg) {
+        	                    location.reload();
+        	                }
+        	            });
+
+        	        });
+
+
+        	    });
+
+        	    function getCookie(name)//取cookies函数
+        	    {
+        	        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+
+        	        if (arr != null) return unescape(arr[2]); return null;
+
+        	    }
+
+</script>
+
+
+
+
+    <header class="">
+         <div class="shortcut" style="z-index:400; background-color:#f8f8f8;" >
+             <div class="w top_nav">
+                 <ul class="fl login">
+
+               <!-- <li><span style="margin-right:30px; cursor:pointer;" class="lang" >English</span></li>-->
+
+                 <li  style="margin-right:20px;">CNY : MRY = &nbsp;<b style="color:#f47a20;">1 : 1.58</b></li>
+                 <li  style="margin-right:20px;">CNY : SGD = &nbsp;<b style="color:#f47a20;">1 : 4.6</b></li>
+                 </ul>
+                 <ul class="fr">
+
+
+                 <li><span class="login_t"><a href="userindexs.html" > {{ user.username }}</a>&nbsp;&nbsp;|</span><a href="{% url 'q:logout' %}" >退出</a>&nbsp;&nbsp;|</li>
+
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:daicai' %}" target="_blank" rel="nofollow"><i class=" icon_shop"></i>购物车<em class="top_red ShoppingNum"></em></a>&nbsp;&nbsp;|</li>
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:userindex' %}" rel="nofollow"><i class=" icon_u"></i>用户中心</a></li>
+                    <!-- <li class="fore"><a href="addzyorder.html" id="shoppingCart" rel="nofollow"><i class="icon_m icon_my"></i><span><em>我的仓库</em><em class="none gerenc">&nbsp;&nbsp;&nbsp;&nbsp;</em></span><em class="top_red OrderNum"></em></a></li>-->
+
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+
+         <div class="w por header-logo" style="height: 120px;"  >
+             <style>
+             .kefu{float:right;margin-top: 15px;margin-right: 20px;}
+             .kefu ul li{ float:left;}
+             </style>
+
+                <div class="logo-wrap logo" align="center">
+                        <a  href="{% url 'q:index' %}"><font size="6" color="#6495ed">新领域国际物流</font></a>
+                 </div>
+
+
+
+             <div class="search-wrap search" style="margin-top:30px;">
+<form action="{% url 'q:addurl' %}" method="post" name="addurl">
+                     {% csrf_token %}
+                     <input type="text" id="Text1" class="fl search_text head-search-text" style="width:448px;padding-left:2px;" name="goods_url" autofocus="true" placeholder="请输入商品的关键词或商品的链接" value="{{ article.goods_url }}"/>
+                     <span class="fl button " onclick="addurl.submit()" id="headSearch"><span class="search-val-text" >代购</span></span>
+                 </form>
+                     <span class="fl" style="margin-left: 50px;margin-top: -5px;">
+
+
+<script>    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+
+      </span>
+
+             </div>
+             <div class="cb"></div>
+             <div class="kefu">
+
+               </div>
+         </div>
+
+            <div class="shortcut" id="nav_list" style="height:54px;">
+             <div class="w">
+                 <ul class="nav clearfix">
+                     <li class="on" ><a href="{% url 'q:index' %}" class="nav_l" style="height:54px; margin-bottom:2px; margin-top:-1px; margin-left:-1px; ">首页</a></li>
+                     <!--<li class="zhidemai" ><a href="golist-650-0.html" class="nav_l">热门商品</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-80' %}" class="nav_l">关于我们</a>
+                    <ul>
+      <li><a href="{% url 'q:content-68' %}">新用户注册</a></li>
+      <li><a href="{% url 'q:content-73' %}">赔偿标准</a></li>
+      <li><a href="{% url 'q:content-65' %}">服务条款</a></li>
+      </ul>
+                     </li>
+                      <li class="zhidemai" ><a href="{% url 'q:addurl' %}" class="nav_l">代购</a>
+                        <!-- <ul>
+      <li><a href="/content-68.html">新用户注册</a></li>-->
+     <!-- <li><a href="/content-25.html">承运条款</a></li>-->
+
+      <!--</ul>-->
+                      </li>
+{#                     <li class="zhidemai" ><a href="javascript:void(0);" class="nav_l">物流跟踪</a>#}
+{#                     <ul>#}
+{#                     <li><a href="{% url 'q:packagesearch' %}">包裹查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+{#       </ul>#}
+{#                     </li>#}
+                                          <li class="zhidemai" ><a href="#" class="nav_l">物流跟踪</a>
+                     <ul>
+                     <li><a href="{% url 'q:packagesearch' %}">包裹查询</a></li>
+{#      <li><a href="#">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+       </ul>
+                     </li>
+
+                     <li class="zhidemai" ><a href="{% url 'q:content-85' %}" class="nav_l">空运服务</a>
+
+       <!--              <ul>
+      <li><a href="/content-5.html"">空运费用</a></li>
+      <li><a href="/content-4.html">空运计费重量</a></li>
+      <li><a href="/content-22.html">不能承运货件</a></li>
+      <li><a href="/content-25.html">承运条款</a></li>
+
+      </ul>   -->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-86' %}" class="nav_l" >海运服务</a>
+                     <!-- <ul>
+            <li><a href="content-32.html">海运服务说明</a></li>
+        </ul>-->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-87' %}" class="nav_l">支付方式</a>
+
+                     <!--<ul>
+      <li><a href="/content-47.html"">支付宝支付</a></li>
+      <li><a href="/content-48.html">中国银行汇款</a></li>
+      </ul>-->
+                     </li>
+                    <!-- <li class="zhidemai" ><a href="/content-80.html" class="nav_l">常见问题</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-53' %}" class="nav_l">联系我们</a></li>
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+</header>
+        <style>
+#guzz{ display:none; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:#ccc; z-index:100;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
+#guzz img{ position:fixed; top:40%; left:0; right:0; bottom:auto; margin:0 auto; }
+.spinner {
+  margin: 100px auto;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+</style>
+
+<div id="guzz">
+<!--<img src="/templets/aigou/images/jjz.gif" />-->
+<div style=" position:absolute; top:30%; left:0; right:0; bottom:auto;">
+<div class="spinner">
+  <div class="spinner-container container1">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container2">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container3">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".search_but").click(function () {
+            var val = $(this).prev().val();
+            if (val != '') {
+                $("#guzz").show();
+                sendgoods();
+            }
+        })
+
+    });
+    function sendgoods() {
+        if ($("#_searchURL").val() != "") {
+            $("#guzz").show();
+            $("#searchURL").submit();
+        }
+    }
+
+    function sendgoods2() {
+        if ($("#_hidesearchURL").val() != "") {
+            $("#guzz").show();
+            $("#hidesearchURL").submit();
+        }
+    }
+
+</script>
+
+
+        <!-- //header -->
+
+
+
+
+
+
+
+<!-- container -->
+<div id="container">
+            <!-- content -->
+            <div id="content">
+                <!-- 页面路劲 -->
+                <div class="top_nav" id="top_nav"><a href="{% url 'q:index' %}">首页</a>&gt;<span> <a href="{% url 'q:userindex' %}">My 新领域货运 </a>  </span>&gt;<span> 订单列表 </span></div>
+                <!-- //页面路径 -->
+                <div class="maic_box">
+                <!-- leftmenu -->
+                <div id="leftmenu" class="left_nb">
+                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/static/templets/aigouen/images/blu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>代购服务</strong></dt>
+                    <dd><a href="{% url 'q:addurl' %}">添加链接</a></dd>
+                    <dd><a href="{% url 'q:daicai' %}">代购购物车</a></dd>
+                    <dd><a href="{% url 'q:daigouorderlist' %}">我的订单</a></dd>
+                </dl>
+                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/static/templets/aigouen/images/flu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>国际转运服务</strong></dt>
+                    <dd><a href="{% url 'q:addzyorder' %}">提交国际代运</a></dd>
+                    <dd><a href="{% url 'q:waybill' %}">我的运单</a></dd>
+                </dl>
+                                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/templets/aigouen/images/alt.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>我的账户</strong></dt>
+                    <dd><a href="{% url 'q:top_up_a' %}">充值</a></dd>
+                    <dd><a href="{% url 'q:paylist' %}">账号历史记录</a></dd>
+                </dl>
+                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/templets/aigouen/images/slu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>会员设置</strong></dt>
+                    <dd><a href="{% url 'q:useraddress' %}">收货地址</a></dd>
+                    <dd><a href="{% url 'q:r_pass' %}">修改密码</a> </dd>
+                </dl>
+                    <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/templets/aigouen/images/clu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>客服</strong></dt>
+                    <dd><a href="{% url 'q:feedback' %}">意见箱/投诉</a></dd>
+                </dl>
+
+            </div>
+                  <!-- //leftmenu -->
+
+
+
+
+{#<div class="right_box">#}
+{#    <div class="uc_section05" >#}
+{#        <h3 class="tit">我的运单</h3>#}
+{#        <div style="margin-top:5px;">#}
+{##}
+{#               <div class="usercenter_tab clearfix">#}
+{##}
+{#                </div>#}
+{##}
+{#                <div class="usercenter_ordersearch">#}
+{#                </div>#}
+{##}
+{#                   <table width="100%" cellspacing="1" cellpadding="5" border="0" style=" margin-top:5px;" class="table_listhead">#}
+{#                    <thead>#}
+{#                        <tr  align="center"  style="height:28px;">#}
+{#                            <td style="width:10%" >商品</td>#}
+{#                            <td style="width:10%">物品单价</td>#}
+{#                            <td style="width:15%">运单号</td>#}
+{#                            <td style="width:20%">运输渠道</td>#}
+{#                            <td style="width:15%">备注</td>#}
+{#                            <td style="width:10%">状态</td>#}
+{#                            <td style="width:10%">运费总价</td>#}
+{#                            <td style="width: 10%">点击支付运费</td>#}
+{#                        </tr>#}
+{#                    </thead>#}
+{#                   </table>#}
+{#            <div id="table_list" style=" margin-top:5px;">#}
+{#                <div id="12714">#}
+{#                    {% for a in x %}#}
+{#                    <table class='table_list user_orderlist' width='100%' id='12714' border='1'>#}
+{#                        <thead>#}
+{#                        <tr>#}
+{#                            <td colspan='8' align='left' style='border:0 none;'> &nbsp;&nbsp;订单编号：#}
+{#                                <span style='color:red;' >{{ a.id }}</span>&nbsp;&nbsp;#}
+{#                                {{ a.create_time }}</td>#}
+{#                        </tr>#}
+{#                        </thead>#}
+{#                        <tbody>#}
+{#                        <tr>#}
+{#                            <td style='width:10%'>{{ a.ddname }}</td>#}
+{#                            <td style='width:10%'>{{ a.dddanjia }}</td>#}
+{#                            <td style='width:15%'>{{ a.ddnum }}</td>#}
+{#                            <td style='width:30%'>{{ a.get_yslx_display }}</td>#}
+{#                            <td style='width:15%'>{{ a.beizhu }}</td>#}
+{#                            <td style='width:10%'>{{ a.get_state_display }}<br /><br />{{ a.get_payment_id_display }}#}
+{#                            </td>#}
+{#                            <td style='width:10%'>{{ a.yunfei }}</td>#}
+{#                            <td style="width: 10%">#}
+{#                                <FORM action="{% url 'q:waybill' %}" method="post">#}
+{#                                    {% csrf_token %}#}
+{#                                    <input type="hidden" name="yunfei" value="{{ a.yunfei }}"/>#}
+{#                                    <input type="hidden" name="t_id" value="{{ a.id }}">#}
+{#                                    <input type="hidden" name="py" value="2">#}
+{#                                    <input type="submit" value="支付"  style= "background-color:transparent;border:0;">#}
+{#                                </FORM>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        </tbody>#}
+{#                    </table>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="news-page marginTop15">#}
+{#						<table class="table6_01">#}
+{#							<tr>#}
+{#								<td>#}
+{#<link rel="stylesheet" type="text/css" href="/templets/baisun/css/page.css"/>#}
+{#<div id="PageDivTag" class="manu">#}
+{#共<span>1</span>页<span>2</span>条&nbsp;&nbsp;#}
+{#<a id="PageFirstLinkTag">[首页]</a> <a id="PagePreviousLinkTag">[上一页]</a>#}
+{##}
+{#<font color="red">1</font>#}
+{#<a id="PageNextLinkTag">[下一页]</a><a id="PageLastLinkTag"> [尾页]</a>#}
+{#每页8条&nbsp;&nbsp;#}
+{##}
+{##}
+{#							</div>	</td>#}
+{#							</tr>#}
+{#						</table>#}
+{#					</div>#}
+{##}
+{#                                </div>#}
+{##}
+{#        </div>#}
+{##}
+{##}
+{#    </div>#}
+
+                <div class="right_box">
+    <div class="uc_section05" >
+        <h3 class="tit">我的运单</h3>
+        <div style="margin-top:5px;">
+
+               <div class="usercenter_tab clearfix">
+                    <ul>
+                        <li  class="on" ><a href="waybill-10-1.html">全部订单</a></li>
+                        <li ><a href="waybill-7-1.html" >未处理<span class="or_font"></span></a></li>
+                        <li ><a href="waybill-5-1.html">订单处理中<span class="or_font"></span></a></li>
+                        <li ><a href="waybill-1-1.html">待付款<span class="or_font"></span></a></li>
+                        <li ><a href="waybill-2-1.html">已付款<span class="or_font"></span></a></li>
+                        <li ><a href="waybill-3-1.html" >已发货<span class="or_font"></span></a></li>
+                        <li ><a href="waybill-4-1.html">交易成功<span class="or_font"></span></a></li>
+                        <li ><a href="waybill-6-1.html" >扣货<span class="or_font"></span></a></li>
+                        <li ><a href="waybill-0-1.html">无效订单<span class="or_font"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="usercenter_ordersearch">
+                                <form id="search_form" name="form1" method="get" action="waybill.html" >
+                        收货人：<input type="text" name="keywords"  class="input_searchborder" value="" style="width:100px">
+                        地区：<input type="text" name="exnum"  class="input_searchborder" value="" style="width:100px">
+                        快递单号：<input type="text" name="exnum2"  class="input_searchborder" value="" style="width:100px">
+                        国际单号：<input type="text" name="exnum3"  class="input_searchborder" value="" style="width:100px">
+                        <input type="submit" id="xsearch_btn" value="搜索" class="input_back input_send input_send24" style="height:24px;line-height:18px;">
+
+
+                                </form>
+                </div>
+
+                   <table width="100%" cellspacing="1" cellpadding="5" border="0" style=" margin-top:5px;" class="table_listhead">
+                    <thead>
+                        <tr  align="center"  style="height:28px;">
+                            <td style="width:10%" >商品</td>
+                            <td style="width:10%">物品单价</td>
+                            <td style="width:15%">运单号</td>
+                            <td style="width:20%">运输渠道</td>
+                            <td style="width:15%">备注</td>
+                            <td style="width:10%">状态</td>
+                            <td style="width:10%">运费总价</td>
+                            <td style="width: 10%">点击支付运费</td>
+                        </tr>
+                    </thead>
+                   </table>
+                        <div id="table_list" style=" margin-top:5px;">
+                                                {% for a in x %}
+                    <table class='table_list user_orderlist' width='100%' id='12714' border='1'>
+                        <thead>
+                        <tr>
+                            <td colspan='8' align='left' style='border:0 none;'> &nbsp;&nbsp;订单编号：
+                                <span style='color:red;' >{{ a.id }}</span>&nbsp;&nbsp;
+                                {{ a.create_time }}</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style='width:10%'>{{ a.ddname }}</td>
+                            <td style='width:10%'>{{ a.dddanjia }}</td>
+                            <td style='width:15%'>{{ a.ddnum }}</td>
+                            <td style='width:30%'>{{ a.get_yslx_display }}</td>
+                            <td style='width:15%'>{{ a.beizhu }}</td>
+                            <td style='width:10%'>{{ a.get_state_display }}<br /><br />{{ a.get_payment_id_display }}
+                            </td>
+                            <td style='width:10%'>{{ a.yunfei }}</td>
+                            <td style="width: 10%">
+                                <FORM action="{% url 'q:waybill' %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="yunfei" value="{{ a.yunfei }}"/>
+                                    <input type="hidden" name="t_id" value="{{ a.id }}">
+                                    <input type="hidden" name="py" value="2">
+                                    <input type="submit" value="支付"  style= "background-color:transparent;border:0;">
+                                </FORM>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    {% endfor %}
+
+                        </div>
+                         <div class="news-page marginTop15">
+						<table class="table6_01">
+							<tr>
+								<td>
+<link rel="stylesheet" type="text/css" href="/templets/baisun/css/page.css"/>
+<div id="PageDivTag" class="manu">
+共<span>1</span>页<span>2</span>条&nbsp;&nbsp;
+<a id="PageFirstLinkTag">[首页]</a> <a id="PagePreviousLinkTag">[上一页]</a>
+
+<font color="red">1</font>
+<a id="PageNextLinkTag">[下一页]</a><a id="PageLastLinkTag"> [尾页]</a>
+每页8条&nbsp;&nbsp;
+
+
+							</div>	</td>
+							</tr>
+						</table>
+					</div>
+
+                                </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+                </div>
+
+            </div>
+
+
+
+</div>
+
+<!-- //container -->
+
+
+          <!-- footer -->
+
+        <div class="shortcut footer" style="margin-top:13px; background-color:#f8f8f8;">
+        <div class="w" >
+            <div class="service_l" >
+
+               <ul class="foot_tool">
+
+
+					<li>
+
+    						<p><strong>新手指南</strong></p>
+                        						<p><a href="{% url 'q:content-68' %}">新用户注册</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-80' %}">关于我们</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>付款方式</strong></p>
+
+                        						<p><a href="{% url 'q:content-49' %}">国际信用卡</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-71' %}">支付宝付款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-74' %}">微信支付</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-87' %}">支付方式</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>配送相关</strong></p>
+
+                        						<p><a href="{% url 'q:content-51' %}">物流运费</a>
+						</p>
+
+
+                        						<p><a href={% url 'q:content-56' %}>海关及税项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-75' %}">重量计算法</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-77' %}">什么是敏感货</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-79' %}">大货商品</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-85' %}">空运服务</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-86' %}">海运服务</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>售后服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-54' %}">代购退换货政策</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-72' %}">收货注意事项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-73' %}">赔偿标准</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-78' %}">投诉意见箱</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>其他服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-57' %}">商品估重</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-58' %}">尺码换算</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-59' %}">测量帮助</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-65' %}">服务条款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-70' %}">邮政编码查询</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-88' %}">服务标准协议</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-89' %}">存仓有效期</a>
+						</p>
+
+
+</li>
+</ul>
+
+                <div class="fr two_code">
+
+                </div>
+                <div class="fr two_code code_margin">
+
+                </div>
+                <div class="cb">
+                </div>
+            </div>
+            <div class="footer_nav">
+
+                <div class="cb">
+                </div>
+            </div>
+
+
+
+
+      <!--      <div class="links">
+
+            </div>
+            <p class="ft_panli_about">
+               </p>-->
+        </div>
+        <div class="foot2">
+
+</div>
+    </div>
+
+
+
+<script src="/static/templets/aigou/artdialog/artDialog.js?skin=blue"></script>
+<script src="/static/templets/aigou/artdialog/plugins/iframeTools.js?skin=blue"></script>
+
+
+
+		<!-- footer -->
+        </div>
+	</body>
+
+</html>
+<script>
+    function openfill(id) {
+        art.dialog.open('openfillorder.html?Id=' + id + "&act=act", {
+            title: '补款',
+            width: 500,
+            //height:600,
+            modal: true,
+            lock: true,
+            draggable: false,
+            resizable: false
+        });
+
+    }
+
+    function openex(id) {
+        art.dialog.open('openexinfo.html?knum=' + id, {
+            title: '物流跟踪',
+            width: 800,
+            modal: true,
+            lock: true,
+            draggable: false,
+            resizable: false
+        });
+
+
+    }
+
+    function can(id) {
+        if (confirm("确定要取消订单吗？")) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/templets/daigou/Tools/DaiGouCar.ashx",
+                        data: "key=" + id + "&Action=cancelorder",
+                        success: function (msg) {
+                            if (msg) {
+                                alert("取消成功！");
+                                parent.window.location.reload();
+                                art.dialog.close();
+                            } else {
+                                alert("取消失败！");
+                                parent.window.location.reload();
+                                art.dialog.close();
+                            }
+
+                        }
+                    });
+                }
+    }
+</script>

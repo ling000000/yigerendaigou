@@ -1,0 +1,119 @@
+@charset "utf-8";
+.mesWindow {
+	border: #FF6600 5px solid;
+	padding:10px;
+	background:#fff;
+	font-family:"Microsoft JhengHei","Microsoft YaHei",Helvetica,Arial,sans-serif;
+}
+.mesWindow h2 {
+	border-bottom:#eee 1px solid;
+	margin:0 10px;
+	padding-bottom:5px;
+	font-weight:bold;
+	text-align:left;
+	line-height:20px;
+	font-size:1.4em;
+	color:#FF6633;
+}
+.mesWindow h2 em {
+	color:#999;
+	font-size:.8em;
+	font-style:normal;
+}
+.mesWindow h2 span {
+	float:right;
+}
+.mesWindow .close {
+	background:url("close.png") no-repeat;
+	text-indent:-9999px;
+	display:block;
+	width:40px;
+	height:40px;
+	border:none;
+	cursor:pointer;
+}
+.mesWindowContent {
+	margin:4px;
+	font-size:12px;
+}
+.mesWindowContent a {
+	color:#004C76;
+	text-decoration:none;
+}
+.mesWindowContent a:hover {
+	color:#c00;
+	text-decoration:underline;
+}
+/* -- 内窗口 -- */
+.theme-tips {
+	padding:30px; padding-top:0;
+	background-color:#fff;
+	position:relative;
+}
+.theme-tips h3 {
+	color:#ac3231;
+	margin-top:10px;
+}
+.theme-tips p {
+	font-size:14px;
+	line-height:18px;
+	margin-top:6px;
+	text-align:center;
+}
+.theme-tips .notice {
+	padding:10px;
+	margin-bottom:10px;
+	border:2px solid #FC9141;
+	line-height:1.5em;
+	background:#FFF6BF;
+	color:#514721;
+	width:90%;
+	text-align:left;
+	font-size:16px;
+	font-weight:bold;
+}
+.demo-link {
+	margin-top:10px;
+}
+.demo-link li {
+	display:block;
+	width:180px;
+	float:left;
+	padding:3px 8px;
+}
+.demo-link li a {
+	color:#027b98;
+	font-size:14px;
+	font-weight:bold;
+}
+.demo-link li em {
+	font-size:12px;
+}
+.demo-user span {
+	display:inline-block;
+	width:240px;
+	float:left;
+	margin-top:10px;
+	margin-left:20px;
+	padding:10px;
+	background:#eee;
+	border:1px solid #999;
+}
+.demo-user b {
+	display:block;
+	clear:both;
+}
+.theme-tips .buy {
+	position:absolute;
+	top:10px;
+	right:10px;
+	padding:10px;
+	color:#8a1f11;
+	font-size:18px;
+	font-weight:bold;
+	background:#FBE3E4;
+	border:2px solid #FBC2C4;
+}
+.theme-tips .buy:hover {
+	background-position:0 -60px;
+}

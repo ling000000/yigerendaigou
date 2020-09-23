@@ -1,0 +1,13 @@
+{% block content %}
+{{registAdd}}
+<br>
+================
+<br>
+{% if adminname %}
+注册失败{{ adminname }}已存在
+<a href="{% url 'h:sign_up' %}">注册</a>
+{% else %}
+注册成功！
+<a href="{% url 'h:sign_in' %}">登陆</a>
+{% endif %}
+{% endblock %}

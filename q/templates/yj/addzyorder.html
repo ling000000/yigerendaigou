@@ -1,0 +1,1152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="language" content="ch">
+		<meta http-equiv="language" content="ch">
+
+		<link rel="shortcut icon" href="/static/templets/aigou/images/favicon.ico" type="image/x-icon">
+		<title> 代运 </title>
+		<meta name="description" content="&lt;meta name=&quot;Description&quot; content=&quot;云际国际，帮马来西亚及新加坡海外华人代购淘宝商品及拍拍当当等中国购物网站一切商品。国际运费EMS和DHL均50%的折扣，代购中国首选平台。&quot; /&gt;">
+
+		<link href="/static/templets/aigou/css/user.css" rel="stylesheet" type="text/css">
+		<link href="/static/templets/aigou/css/global.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="/static/templets/aigou/js/jquery-1.7.2.min.js"></script>
+		<script  type="text/javascript"  src="/static/templets/aigou/js/analytics.js"></script>
+		<script src="/static/templets/aigou/js/bat.js" ></script>
+		<script src="/static/templets/aigou/js/analytics.js"></script>
+
+		<script type="text/javascript"  src="/static/templets/aigou/js/jquery.roundabout-1.0.js"></script>
+		<script type="text/javascript"  src="/static/templets/aigou/js/livechat.js"></script>
+		<script type="text/javascript"  src="/static/templets/aigou/js/headnew.js"></script>
+        <script type="text/javascript" src="../../../../Js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="../../../../Js/jquery.form.js"></script>
+        <script type="text/javascript" src="/static/templets/aigou/Js/DatePicker/WdatePicker.js"></script>
+
+
+		<script type="text/javascript" src="/static/templets/aigou/js/roundtrip.js"></script>
+		<script type="text/javascript" src="/static/templets/aigou/js/getproduct.js"></script>
+		<script type="text/javascript" src="/static/templets/aigou/js/jquery.json.min.js"></script>
+        <style>
+        #aptd input[type="text"],select {
+            border: 1px solid #b7b7b7;
+            box-shadow: 0 1px 2px #e3e3e3 inset;
+            float: left;
+            font-size: 13px;
+            height: 24px;
+            line-height: 24px;
+            margin-right: 5px;
+            padding: 2px 2px;
+        }
+        .right_box
+        {
+            padding: 15px;
+            width: 930px;
+        }
+        .right_box .tit
+        {
+            border-bottom: 1px solid #ccc !important;
+            margin-bottom: 15px;
+        }
+        </style>
+	</head>
+
+	<body>
+
+
+    <div id="wrap">
+          <!-- header -->
+             <link href="/static/templets/aigou/css/main.min.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/default.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/cnindexnew.css" rel="stylesheet" type="text/css">
+<link href="/static/templets/aigou/css/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"  src="/static/templets/aigou/js/headnew.js"></script>
+        	<script type="text/javascript">
+
+        	    $(function () {
+        	        var langobj = getCookie('lang');
+        	        var lang = "ch";
+        	        if (langobj != null) {
+        	            lang = langobj.substr(2, 2);
+        	            if (lang == "en") {
+        	                $(".lang").val("en");
+        	            }
+        	            else {
+        	                $(".lang").val("ch");
+        	            }
+
+        	        }
+        	        else {
+        	            $(".lang").val("ch");
+        	            lang = "ch";
+        	        }
+        	        $(".lang").click(function () {
+        	            var lst = "ch";
+        	            if ($(".lang").text() == "English") {
+        	                lst = "en";
+        	                $(".lang").text("中文");
+        	            }
+        	            $.ajax({
+        	                type: "POST",
+        	                url: "/Tools/jsonregister.ashx?action=lang",
+        	                data: "lstr=" + lst,
+        	                success: function (msg) {
+        	                    location.reload();
+        	                }
+        	            });
+
+        	        });
+
+
+        	    });
+
+        	    function getCookie(name)//取cookies函数
+        	    {
+        	        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+
+        	        if (arr != null) return unescape(arr[2]); return null;
+
+        	    }
+
+</script>
+
+
+
+
+    <header class="">
+         <div class="shortcut" style="z-index:400; background-color:#f8f8f8;" >
+             <div class="w top_nav">
+                 <ul class="fl login">
+
+               <!-- <li><span style="margin-right:30px; cursor:pointer;" class="lang" >English</span></li>-->
+
+                 <li  style="margin-right:20px;">CNY : MRY = &nbsp;<b style="color:#f47a20;">1 : 1.58</b></li>
+                 <li  style="margin-right:20px;">CNY : SGD = &nbsp;<b style="color:#f47a20;">1 : 4.6</b></li>
+                 </ul>
+                 <ul class="fr">
+
+
+                 <li><span class="login_t"><a href="{% url 'q:userindex' %}" > {{ user.username }}</a>&nbsp;&nbsp;|</span><a href="{% url 'q:logout' %}" >退出</a>&nbsp;&nbsp;|</li>
+
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:daicai' %}" target="_blank" rel="nofollow"><i class=" icon_shop"></i>购物车<em class="top_red ShoppingNum"></em></a>&nbsp;&nbsp;|</li>
+                     <li class="fore" style=" padding:0 10px 0 8px"><a href="{% url 'q:userindex' %}" rel="nofollow"><i class=" icon_u"></i>用户中心</a></li>
+                    <!-- <li class="fore"><a href="addzyorder.html" id="shoppingCart" rel="nofollow"><i class="icon_m icon_my"></i><span><em>我的仓库</em><em class="none gerenc">&nbsp;&nbsp;&nbsp;&nbsp;</em></span><em class="top_red OrderNum"></em></a></li>-->
+
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+
+         <div class="w por header-logo" style="height: 120px;"  >
+             <style>
+             .kefu{float:right;margin-top: 15px;margin-right: 20px;}
+             .kefu ul li{ float:left;}
+             </style>
+
+                <div class="logo-wrap logo" align="center">
+                        <a  href="{% url 'q:index' %}"><font size="6" color="#6495ed">新领域国际物流</font></a>
+                 </div>
+
+
+
+             <div class="search-wrap search" style="margin-top:30px;">
+                 <form action="{% url 'q:addurl' %}" method="post" name="addurl">
+                     {% csrf_token %}
+                     <input type="text" id="Text1" class="fl search_text head-search-text" style="width:448px;padding-left:2px;" name="goods_url" autofocus="true" placeholder="请输入商品的关键词或商品的链接" value="{{ article.goods_url }}"/>
+                     <span class="fl button " onclick="addurl.submit()" id="headSearch"><span class="search-val-text" >代购</span></span>
+                 </form>
+
+                 <span class="fl" style="margin-left: 50px;margin-top: -5px;">
+
+                     <div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1493651104050">
+                     </div>
+                     <script>    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                 </span>
+
+             </div>
+             <div class="cb"></div>
+             <div class="kefu">
+
+               </div>
+         </div>
+
+            <div class="shortcut" id="nav_list" style="height:54px;">
+             <div class="w">
+                 <ul class="nav clearfix">
+                     <li class="on" ><a href="{% url 'q:index' %}" class="nav_l" style="height:54px; margin-bottom:2px; margin-top:-1px; margin-left:-1px; ">首页</a></li>
+                     <!--<li class="zhidemai" ><a href="golist-650-0.html" class="nav_l">热门商品</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-80' %}" class="nav_l">关于我们</a>
+                    <ul>
+      <li><a href="{% url 'q:content-68' %}">新用户注册</a></li>
+      <li><a href="{% url 'q:content-73' %}">赔偿标准</a></li>
+      <li><a href="{% url 'q:content-65' %}">服务条款</a></li>
+      </ul>
+                     </li>
+                      <li class="zhidemai" ><a href="{% url 'q:addurl' %}" class="nav_l">代购</a>
+                        <!-- <ul>
+      <li><a href="/content-68.html">新用户注册</a></li>-->
+     <!-- <li><a href="/content-25.html">承运条款</a></li>-->
+
+      <!--</ul>-->
+                      </li>
+{#                     <li class="zhidemai" ><a href="#" class="nav_l">物流跟踪</a>#}
+{#                     <ul>#}
+{#                     <li><a href="/packagesearch.html">包裹查询</a></li>#}
+{#      <li><a href="/check_express.html">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+{#       </ul>#}
+{#                     </li>#}
+                                          <li class="zhidemai" ><a href="#" class="nav_l">物流跟踪</a>
+                     <ul>
+                     <li><a href="{% url 'q:packagesearch' %}">包裹查询</a></li>
+{#      <li><a href="#">空运查询</a></li>#}
+{#     <!--  <li><a href="/haiordersearch.html">海运查询</a></li>-->#}
+       </ul>
+                     </li>
+
+                     <li class="zhidemai" ><a href="{% url 'q:content-85' %}" class="nav_l">空运服务</a>
+
+       <!--              <ul>
+      <li><a href="/content-5.html"">空运费用</a></li>
+      <li><a href="/content-4.html">空运计费重量</a></li>
+      <li><a href="/content-22.html">不能承运货件</a></li>
+      <li><a href="/content-25.html">承运条款</a></li>
+
+      </ul>   -->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-86' %}" class="nav_l" >海运服务</a>
+                     <!-- <ul>
+            <li><a href="content-32.html">海运服务说明</a></li>
+        </ul>-->
+                     </li>
+                     <li class="zhidemai" ><a href="{% url 'q:content-87' %}" class="nav_l">支付方式</a>
+
+                     <!--<ul>
+      <li><a href="/content-47.html"">支付宝支付</a></li>
+      <li><a href="/content-48.html">中国银行汇款</a></li>
+      </ul>-->
+                     </li>
+                    <!-- <li class="zhidemai" ><a href="/content-80.html" class="nav_l">常见问题</a></li>-->
+                     <li class="zhidemai" ><a href="{% url 'q:content-53' %}" class="nav_l">联系我们</a></li>
+                 </ul>
+                 <div class="cb"></div>
+             </div>
+         </div>
+</header>
+        <style>
+#guzz{ display:none; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; background:#ccc; z-index:100;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
+#guzz img{ position:fixed; top:40%; left:0; right:0; bottom:auto; margin:0 auto; }
+.spinner {
+  margin: 100px auto;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+</style>
+
+<div id="guzz">
+<!--<img src="/templets/aigou/images/jjz.gif" />-->
+<div style=" position:absolute; top:30%; left:0; right:0; bottom:auto;">
+<div class="spinner">
+  <div class="spinner-container container1">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container2">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container3">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".search_but").click(function () {
+            var val = $(this).prev().val();
+            if (val != '') {
+                $("#guzz").show();
+                sendgoods();
+            }
+        })
+
+    });
+    function sendgoods() {
+        if ($("#_searchURL").val() != "") {
+            $("#guzz").show();
+            $("#searchURL").submit();
+        }
+    }
+
+    function sendgoods2() {
+        if ($("#_hidesearchURL").val() != "") {
+            $("#guzz").show();
+            $("#hidesearchURL").submit();
+        }
+    }
+
+</script>
+
+
+        <!-- //header -->
+
+
+
+
+
+
+
+<!-- container -->
+<div id="container">
+            <!-- content -->
+            <div id="content">
+                <!-- 页面路劲 -->
+                <div class="top_nav" id="top_nav"><a href="{% url 'q:index' %}">首页</a>&gt;<span> 会员中心 </span>&gt;<span> 添加转运订单 </span></div>
+                <!-- //页面路径 -->
+                <div class="maic_box">
+                <!-- leftmenu -->
+                <div id="leftmenu" class="left_nb">
+                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/static/templets/aigouen/images/blu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>代购服务</strong></dt>
+                    <dd><a href="{% url 'q:addurl' %}">添加链接</a></dd>
+                    <dd><a href="{% url 'q:daicai' %}">代购购物车</a></dd>
+                    <dd><a href="{% url 'q:daigouorderlist' %}">我的订单</a></dd>
+                </dl>
+                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/static/templets/aigouen/images/flu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>国际转运服务</strong></dt>
+                    <dd><a href="{% url 'q:addzyorder' %}">提交国际代运</a></dd>
+                    <dd><a href="{% url 'q:waybill' %}">我的运单</a></dd>
+                </dl>
+                                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/templets/aigouen/images/alt.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>我的账户</strong></dt>
+                    <dd><a href="{% url 'q:top_up_a' %}">充值</a></dd>
+                    <dd><a href="{% url 'q:paylist' %}">账号历史记录</a></dd>
+                </dl>
+                <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/templets/aigouen/images/slu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>会员设置</strong></dt>
+                    <dd><a href="{% url 'q:useraddress' %}">收货地址</a></dd>
+                    <dd><a href="{% url 'q:r_pass' %}">修改密码</a> </dd>
+                </dl>
+                    <dl>
+                    <dt style="position:relative;"><em style=" background-image:url(/templets/aigouen/images/clu.png); width:18px; height:21px; position:absolute; left:-22px;"></em><strong>客服</strong></dt>
+                    <dd><a href="{% url 'q:feedback' %}">意见箱/投诉</a></dd>
+                </dl>
+
+            </div>
+                  <!-- //leftmenu -->
+
+
+<div class="right_box">
+
+    <div class="uc_section05" >
+    <input type="text" name="country" value="{{ error }}" disabled="disabled" style= "color:red;border:0px;background:none;height:25px; font-size:25px;" />
+        <h3 class="tit">添加转运订单</h3>
+        <form id="addform" action="{% url 'q:addzy' %}" method="post">
+        <div style="margin:5px 0;">
+
+
+                 {% csrf_token %}
+                <table class="table_listhead2" width="100%" cellspacing="1" cellpadding="5" border="0" style="margin-top: 5px;">
+                    <thead>
+                        <tr>
+                            <td>快递公司</td>
+                            <td>快递单号</td>
+                            <td>物品名称</td>
+                            <td>物品数量</td>
+                            <td>单价</td>
+                            <td>备注</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+
+                    <tbody id="aptd">
+                        <tr>
+                                           <td>
+                                               <select style="height: 29px;" name="f"><option value='0'></option>
+	                                            <option value='1'>申通</option><option value='2'>圆通</option>
+                                                   <option value='3'>中通</option><option value='4'>韵达</option>
+                                                   <option value='5'>百世</option><option value='6'>天天</option>
+                                                   <option value='7'>顺丰</option><option value='8'>邮政</option>
+                                                   <option value='9'>EMS</option><option value='10'>优速</option>
+                                                   <option value='11'>安能</option><option value='12'>快捷</option>
+                                                   <option value='13'>德邦</option><option value='14'>宅急送</option>
+                                                   <option value='15'>速尔</option><option value='16'>苏宁</option>
+                                                   <option value='17'>京东</option><option value='18'>加运美</option>
+                                                   <option value='19'>龙邦</option><option value='20'>万象物流</option>
+                                                   <option value='21'>联昊通</option><option value='22'>全峰</option>
+                                                   <option value='23'>国通</option><option value='24'>信丰</option>
+                                                   <option value='25'>菜鸟快递</option><option value='26'>如风达</option>
+                                                   <option value='27'>京广物流</option><option value='28'>运通物流</option>
+                                                   <option value='29'>其他物流</option><option value='30'>新邦物流</option>
+                                                </select>
+                                           </td>
+                                           <td>
+                                                            <input name="a"  type="text" value="{{ dingdan.a }}"    class="input-all required expressno" />
+                                           </td>
+                                           <td>
+                                                             <input name="b" type="text" value="{{ dingdan.b }}"     class="input-all required title" />
+                                           </td>
+                                           <td>
+                                                             <input name="c" type="text" value="{{ dingdan.c }}"     class="input-all required goodcount" />
+                                           </td>
+                                           <td>
+                                                             <input name="d" type="text" value="{{ dingdan.d }}"     class="input-all required goodprice" />
+                                           </td>
+                                           <td>
+                                                             <input name="e" type="text" value="{{ dingdan.e }}"     class="input-all required remark2" />
+                                           </td>
+                                           <td>
+
+                                           </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            <div style="width: 100%; text-align: center; margin: 15px; 0">
+
+            </div>
+
+        </div>
+            <div style="margin:5px 0;">
+                <h3 class="tit">收货人地址 <a href="{% url 'q:useraddress' %}" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;&nbsp;管理地址 </a></h3>
+                <form id="form2" name="form1" method="post" action="">
+                    <div style=" padding:10px 0;">
+                        <table  class="useraddresstable" >
+                            <tbody>
+                            {% for b in b %}
+                                <tr>
+                                    <td class="noonaddtd">
+                                        <img src="/static/templets/aigouen/images/mai.png" class="addonp" style=" display:none;"/>
+                                        <span style="color:Red; font-weight:bold;display:none;"  class="addonz"  >寄送到</span>
+                                        <input type="radio" name="addr" value="{{ b.id }}" /><input type="hidden" name="addrname" value="" /></td>
+
+                                    <td >{{ b.name }}</td>&nbsp;&nbsp;&nbsp;
+                                    <td >/{{ b.email }}</td>
+                                    <td align="left"  width="60%;"><div style="margin-left:5px; line-height:normal;">{{ b.difang }}</div></td>
+                                    <td >{{ b.mailnum }}</td>
+                                    <td >/{{ b.phone }}</td>
+                                </tr>
+                            {% endfor %}
+
+                            </tbody>
+                        </table><br />
+                        <a href="{% url 'q:address' %}" style="cursor:pointer;" class="input_send">新地址</a>
+                    </div>
+                    <div>
+
+                    </div>
+                </form>
+                <table width="100%" class="shoppingcart_detail">
+                    <tbody>
+
+
+                    <tr style="height:28px;">
+          <td  align="right" bgcolor="#ffffff">货物类型：</td>
+          <td height="20" bgcolor="#ffffff" style="font-size:14px; text-align:left;">
+              <input type="radio" name="goodtype" value="0" checked="true" >普货
+              <input type="radio" name="goodtype" value="1" >敏感货
+              （<span style=" color:Red;">温馨提示当敏感走成普货 会被海关进行罚款或者充公，建议询问清楚卖家</span>）</td>
+        </tr>
+
+        <tr>
+          <td  align="right">运输类型：</td>
+          <td height="20"  style="text-align:left;">
+           <select name="postway" id="postway" style="font-size:14px;">
+			   <option value="0">选择渠道</option>
+               <option value="72">西马（空运）ABX派送单件>=30KG请咨询客服（急件勿选）</option>
+               <option value="74">西马（空运）Skynet派送单件>=40KG请咨询客服</option>
+               <option value="77">东马（空运）ABX派送单件>=25KG请咨询客服</option>
+               <option value="82">西马（空运）Gdex派送</option>
+               <option value="83">新加坡（空运）dragonlink/RaidereX 派送</option>
+               <option value="89">新加坡（海运）最低消费1立方</option>
+               <option value="91">西马（海运小包）（普/敏感）偏远地区咨询客服</option>
+               <option value="93">东马sabah（海运小包)（普货/敏感）偏远地区咨询客服</option>
+               <option value="96">西马（空运）poslaju派送</option>
+               <option value="98">西马(海运）最低消费0.3CBM偏远地区收取偏远费</option>
+               <option value="99">东马海运Sarawak最低消费0.5CBM（偏远地区收取偏远费）</option>
+               <option value="102">东马（空运）Poslaju派送</option>
+               <option value="106">东马SARAWAK（海运小包)（普货/敏感）偏远地区咨询客服</option>
+               <option value="107">东马海运Sabah最低消费0.5CBM（偏远地区收取偏远费）</option>
+               <option value="111">西马（海运小包）（普/敏感）6-10KG</option>
+               <option value="112">东马sabah（海运小包)（普货/敏感）6-10</option>
+               <option value="113">东马SARAWAK（海运小包)（普货/敏感）6-10</option>
+               <option value="114">单边超过140cm或重量超68KG收取120元超长费</option>
+               <option value="115">东马海运偏远地区+250元 最低消费0.5CBM</option>
+               <option value="116">东马海运（纳闽岛LABUAN）偏远地区，最低消费1CBM</option>
+               <option value="117">西马包税(skynet/gdex)下单备注</option>
+               <option value="118">西马（空运）Airpak派送（急件勿选）</option>
+               <option value="1000">其他</option>
+              *必选 <font class="green">若选择其他渠道请在备注里面备注！</font>
+           </td>
+        </tr>
+
+
+        <tr style="height:28px;">
+            <td   align="right">特别服务:</td>
+            <td  style="text-align:left; font-size:14px;">
+                <input name="1" type="checkbox" id="1" value="拍照 [提供物品照片] 1元/张">
+                拍照 [提供物品照片] 1元/张
+                <br>
+                <input type="checkbox" value="验货 验货（只验外表有无破损）rmb5元/件（一个物品）" id="fw2" name="2">
+                验货 验货（只验外表有无破损）rmb5元/件（一个物品）
+                <br>
+                <input type="checkbox" value="点货 点算件数] RBM 5元/限200件 （超出另算）" id="fw3" name="3">
+                点货 点算件数] RBM 5元/限200件 （超出另算）
+                <br>
+                <input type="checkbox" value="同意拆开外包装 /免费(商品少本公司不会负责)" id="fw4" name="4">
+                同意拆开外包装 /免费(商品少本公司不会负责)
+            </td>
+        </tr>
+        <tr >
+            <td width="10%" align="right">备注：</td>
+            <td align="left">
+                <textarea name="txtremark" id="txtremark" cols="40" rows="5" class="input" HintTitle="备注" HintInfo="控制在50个字内。"></textarea> </td>
+        </tr>
+                    </tbody>
+                </table>
+            <div style=" text-align:center; margin:10px 0;">
+                <input type="hidden" name="token" id="token" value="" />
+                <input type="submit" style="margin:0 auto;"  value="确认运单" class="input_send"    />
+            </div>
+        </div>
+            </form>
+
+        <div></div>
+
+    </div>
+
+
+</div>
+                </div>
+
+        </div>
+</div>
+<!-- //container -->
+
+
+          <!-- footer -->
+
+        <div class="shortcut footer" style="margin-top:13px; background-color:#f8f8f8;">
+        <div class="w" >
+            <div class="service_l" >
+
+               <ul class="foot_tool">
+
+
+					<li>
+
+    						<p><strong>新手指南</strong></p>
+                        						<p><a href="{% url 'q:content-68' %}">新用户注册</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-80' %}">关于我们</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>付款方式</strong></p>
+
+                        						<p><a href="{% url 'q:content-49' %}">国际信用卡</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-71' %}">支付宝付款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-74' %}">微信支付</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-87' %}">支付方式</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>配送相关</strong></p>
+
+                        						<p><a href="{% url 'q:content-51' %}">物流运费</a>
+						</p>
+
+
+                        						<p><a href={% url 'q:content-56' %}>海关及税项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-75' %}">重量计算法</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-77' %}">什么是敏感货</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-79' %}">大货商品</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-85' %}">空运服务</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-86' %}">海运服务</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>售后服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-54' %}">代购退换货政策</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-72' %}">收货注意事项</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-73' %}">赔偿标准</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-78' %}">投诉意见箱</a>
+						</p>
+
+
+</li>
+					<li>
+
+    						<p><strong>其他服务</strong></p>
+
+                        						<p><a href="{% url 'q:content-57' %}">商品估重</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-58' %}">尺码换算</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-59' %}">测量帮助</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-65' %}">服务条款</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-70' %}">邮政编码查询</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-88' %}">服务标准协议</a>
+						</p>
+
+
+                        						<p><a href="{% url 'q:content-89' %}">存仓有效期</a>
+						</p>
+
+
+</li>
+</ul>
+
+                <div class="fr two_code">
+
+                </div>
+                <div class="fr two_code code_margin">
+
+                </div>
+                <div class="cb">
+                </div>
+            </div>
+            <div class="footer_nav">
+
+                <div class="cb">
+                </div>
+            </div>
+
+
+
+
+      <!--      <div class="links">
+
+            </div>
+            <p class="ft_panli_about">
+               </p>-->
+        </div>
+        <div class="foot2">
+   <div class="foot2_1">
+
+  </div>
+</div>
+    </div>
+
+
+<!--代码部分begin-->
+<!--<div id="floatTools" class="rides-cs" style="height:346px;">
+  <div class="floatL" style="margin-top:51px;">
+  	<a id="aFloatTools_Show" class="btnOpen" title="查看在线客服" style="top:20px;display:block" href="javascript:void(0);">展开</a>
+  	<a id="aFloatTools_Hide" class="btnCtn" title="关闭在线客服" style="top:20px;display:none" href="javascript:void(0);">收缩</a>
+  </div>
+  <div id="divFloatToolsView" class="floatR" style="display: none;height:332px;width: 140px;">
+    <div class="cn">
+      <h3 class="titZx">在线客服</h3>
+      <ul>
+        <li><span>客服1</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1022910941&site=qq&menu=yes"><img border="0" src="/templets/aigou/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li><span>客服2</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1022910941&site=qq&menu=yes"><img border="0" src="/templets/aigou/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li><span>客服3</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1022910941&site=qq&menu=yes"><img border="0" src="/templets/aigou/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li><span>客服4</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1022910941&site=qq&menu=yes"><img border="0" src="/templets/aigou/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li><span>旺 旺</span> <a href="http://amos.im.alisoft.com/msg.aw?v=2&amp;uid=洋气名女人&amp;site=cntaobao&amp;s=1&amp;charset=utf-8" target="_blank"><img alt="阿里旺旺" src="http://amos.im.alisoft.com/online.aw?v=2&amp;uid=洋气名女人&amp;site=cntaobao&amp;s=1&amp;charset=utf-8" border="0"></a> </li>
+
+        <li style="height:100px; line-height:100px;"><img src="/templets/aigou/images/wx.jpg" style="width:100px;height:100px;" ></img></li>
+        <li style="border:none;"><span>电话：18202097546</span> </li>
+      </ul>
+    </div>
+  </div>
+</div>-->
+<!--<script>
+    $(function () {
+        $("#aFloatTools_Show").click(function () {
+            $('#divFloatToolsView').animate({ width: 'show', opacity: 'show' }, 100, function () { $('#divFloatToolsView').show(); });
+            $('#aFloatTools_Show').hide();
+            $('#aFloatTools_Hide').show();
+        });
+        $("#aFloatTools_Hide").click(function () {
+            $('#divFloatToolsView').animate({ width: 'hide', opacity: 'hide' }, 100, function () { $('#divFloatToolsView').hide(); });
+            $('#aFloatTools_Show').show();
+            $('#aFloatTools_Hide').hide();
+        });
+    });
+</script>-->
+<!--代码部分end-->
+<script src="/static/templets/aigou/artdialog/artDialog.js?skin=blue"></script>
+<script src="/static/templets/aigou/artdialog/plugins/iframeTools.js?skin=blue"></script>
+
+
+
+		<!-- footer -->
+        </div>
+
+	</body>
+
+</html>
+<script>
+
+    $(function () {
+        checkprice();
+        $('.select_all').click(function () {
+            var clicked = $(this).attr('clicked');
+            clicked = clicked == 'true' ? false : true;
+            $('.select_all').attr('clicked', clicked);
+            $('input[name=select_all]').attr('checked', clicked);
+            $(".cbxp:enabled").attr('checked', clicked);
+            checkprice();
+        });
+        //反选
+        $('.dis_select_all').click(function () {
+            $(".cbxp:enabled").each(function () {
+                if (!$(this).is(":checked")) {
+                    $(this).attr('checked', true);
+                }
+                else {
+                    $(this).attr('checked', false);
+                }
+
+            });
+            checkprice();
+        });
+
+
+        $(".cbxp").click(function () {
+            $('.cbxp').each(function () {
+                if (!$(this).is(":checked")) {
+                    $("input[name=select_all]").attr('checked', false);
+                    return false;
+                }
+                $("input[name=select_all]").attr('checked', true);
+            });
+            checkprice();
+        });
+
+
+        $("input[name='addr']").click(function () {
+            $(".addonp").hide();
+            $(".addonz").hide();
+            $(".addresson").removeClass("addresson");
+            $(".onaddtd").addClass("noonaddtd").removeClass("onaddtd");
+            $(this).prev().show().prev().show().parent().addClass("onaddtd").removeClass("noonaddtd").parent().addClass("addresson");
+        });
+
+    });
+
+    function checkprice() {
+        var pirce = 0;
+        var gnum = 0;
+        var totalweight=0;
+        var totalvolueweigt=0;
+        $(".cbxp:checked").each(function () {
+            $(this).parent().parent().find(".gpice").each(function () {
+                pirce += parseFloat($(this).text());
+                gnum += parseInt($(this).prev().text());
+                totalweight += parseFloat($(this).next().text());
+                totalvolueweigt += parseFloat($(this).next().next().text());
+            });
+        });
+
+        $("#totlenum").text(gnum);
+        $("#totleprice").text(pirce.toFixed(2));
+        $("#totleweight").text(totalweight.toFixed(2));
+        $("#totlevolumeweight").text(totalvolueweigt.toFixed(2));
+    }
+
+    function chefrom() {
+        var msg = "";
+
+        $(".expressno").each(function () {
+            if ($(this).val() == "") {
+                msg += "序列号不能为空！\n";
+            }
+        });
+        $(".title").each(function () {
+            if ($(this).val() == "") {
+                msg += "物品名称不能为空！\n";
+            }
+        });
+        var reg = /^[1-9][0-9]*$/;
+
+        $(".goodcount").each(function () {
+            if ($(this).val() == "") {
+                msg += "物品数量不能为空！\n";
+            } else if (reg.test($(this).val()) == false) {
+                    msg += '输入的商品数量不正确!\n';
+                }
+        });
+        var regp = /^([0]|[1-9][0-9]*)$|^([0]|[1-9][0-9]*)(.[0-9]{1,2})?$/;
+
+        $(".goodprice").each(function () {
+            if ($(this).val() == "") {
+                msg += "物品价钱不能为空！\n";
+            } else if (regp.test($(this).val()) == false) {
+                msg += '输入的商品价格不正确!\n';
+            }
+        });
+        if (msg.length > 0) {
+            art.dialog.alert(msg);
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function delpre(obj) {
+        if (confirm("确定删除该行？")) {
+            $(obj).parent().parent().remove();
+        }
+    }
+    function addpre() {
+
+//        if (!chefrom()) {
+//            return;
+//        }
+
+         var elist = "<option value='1'>申通</option><option value='2'>圆通</option><option value='34'>中通</option><option value='35'>韵达</option><option value='36'>百世</option><option value='37'>天天</option><option value='38'>顺丰</option><option value='39'>邮政</option><option value='40'>EMS</option><option value='41'>优速</option><option value='42'>安能</option><option value='43'>快捷</option><option value='44'>德邦</option><option value='45'>宅急送</option><option value='46'>速尔</option><option value='47'>苏宁</option><option value='48'>京东</option><option value='49'>加运美</option><option value='50'>龙邦</option><option value='51'>万象物流</option><option value='52'>联昊通</option><option value='53'>全峰</option><option value='54'>国通</option><option value='55'>信丰</option><option value='56'>菜鸟快递</option><option value='57'>如风达</option><option value='58'>京广物流</option><option value='59'>运通物流</option><option value='60'>其他物流</option><option value='61'>新邦物流</option>";
+        var trstr = "<tr><td><select name=\"express_code\"  style=\"height: 29px;\"  >" + elist + "</select></td><td><input name=\"expressno\"   type=\"text\" class=\"input-all required expressno\" /></td><td><input name=\"title\" type=\"text\"   class=\"input-all required title\" /></td><td><input name=\"goodcount\" type=\"text\"  class=\"input-all required goodcount\" /></td><td><input name=\"goodprice\" type=\"text\"  class=\"input-all required goodprice\" /></td><td><input name=\"remark\" type=\"text\"   class=\"input-all required remark2\" /></td><td><input  type=\"button\" value=\"删除\"  onclick=\"delpre(this)\" class=\"input_send input_sendbold\" /></td></tr>";
+        $("#aptd").append(trstr);
+
+
+    }
+    function sss() {
+
+        if (!chefrom()) {
+            return;
+        }
+
+        var data_arr = $("#addform").serializeArray();
+        var json = "";
+
+        $.each(data_arr, function (i, field) {
+            if (field.name == "express_code") {
+                json += "{'" + field.name + "':'" + field.value + "',";
+            } else if (field.name == "remark") {
+                json += "'" + field.name + "':'" + field.value + "'},";
+            }else {
+                json += "'" + field.name + "':'" + field.value + "',";
+            }
+        });
+        json = "[" + json + "]";
+        $.ajax({
+            url: "/Tools/jsonpack.ashx?action=addorderall",
+            cache: false,
+            dataType: "json",
+            data: { json: json },
+            success: function (data) {
+                if (data.result == "true") {
+                    art.dialog.alert('添加成功！');
+                    location.href = "addzyorder.html";
+                }
+                else {
+                    art.dialog.alert(data.result);
+                }
+            }
+        });
+    }
+
+
+    function address() {
+        art.dialog.open('adduseraddress.html', {
+            title: '添加地址',
+            width: 850,
+            modal: true,
+            lock: true,
+            draggable: false,
+            resizable: false
+        });
+    }
+
+    var isfen = 0, Isphoto = 0, Ischeckpackage = 0, Iscountpackage = 0;
+    function add() {
+
+        if (parseFloat($("#totleprice").text()) > 250) {
+            if (!confirm("货物高过250RM的时候容易中税 如果同意点击!")) {
+                return;
+            }
+
+        }
+
+        if ($("input[name='addr']:checked").length == 0) {
+            alert("请选择地址！");
+            return;
+        }
+
+        var addr = $("input[name='addr']:checked").val();
+        var addrname = $("input[name='addr']:checked").next().val();
+        var postway = $("#postway").val();
+        if (postway == 0) {
+            alert("请选择渠道！");
+            return;
+        }
+        var Issensive = $("input[name='goodtype']:checked").val();
+
+        var remark = $("#txtremark").val();
+
+        if ($("#fw4").attr("checked") == "checked") {
+            isfen = 1;
+            remark += "；" + $("#fw4").next().text();
+        }
+        if ($("#fw3").attr("checked") == "checked") {
+            Iscountpackage = 1;
+            remark += "；" + $("#fw3").next().text();
+        }
+        if ($("#fw2").attr("checked") == "checked") {
+            Ischeckpackage = 1;
+            remark += "；" + $("#fw2").next().text();
+        }
+        if ($("#fw1").attr("checked") == "checked") {
+            Isphoto = 1;
+            remark += "；" + $("#fw1").next().text();
+        }
+        var data = "";
+        $("input[name='mkey']:checked").each(function () {
+            data += $(this).val() + ",";
+        });
+        if (data.length == 0) {
+            alert("请选择可以提交的包裹！");
+            return;
+        }
+        $(".input_send").css("background-color", "#c3ced5");
+        $(".input_send").attr("disabled", "disabled");
+
+        var chstr = "";
+        $(".fwz > input").each(function (i, item) {
+            if (item.name == "coid") {
+                chstr += "{\"Oid\":\"" + item.value + "\",";
+            } else if (item.name == "cpid") {
+                chstr += "\"Pid\":\"" + item.value + "\",\"Chenckvalues\":\"";
+            } else if (item.name == "txtremark") {
+                chstr += "\",\"Remark\":\"" + item.value + "\"},";
+            } else {
+                if ($(this).is(":checked")) {
+                    chstr += ($(this).next().text() + "|");
+                }
+            }
+        });
+        chstr = "[" + chstr.substring(0, chstr.length - 1) + "]";
+
+        $(".input_send").css("background-color", "#c3ced5");
+        $(".input_send").attr("disabled", "disabled");
+
+        $.ajax({
+            type: "POST",
+            url: "/templets/daigou/Tools/OrderSend.ashx",
+            data: "plist=" + data.substr(0, data.length - 1) + "&addr=" + addr + "&addrname=" + addrname + "&remark=" + remark + "&postway=" + postway + "&isfen=" + isfen + "&Iscountpackage=" + Iscountpackage + "&Ischeckpackage=" + Ischeckpackage + "&Isphoto=" + Isphoto + "&Issensive=" + Issensive + "&chstr=" + chstr,
+            success: function (msg) {
+                if (msg) {
+                    alert("下单成功！");
+                    location.href = "waybill.html";
+                } else {
+                    alert("下单失败！");
+                    location.href = "usersongcar.html";
+                }
+            }
+        });
+
+    }
+
+    function ed(oid) {
+        art.dialog.open('/editzyorder.html?act=editorder&oid=' + oid, {
+            title: '修改单价',
+            width: 700,
+            //height:600,
+            modal: true,
+            lock: true,
+            draggable: false,
+            resizable: false
+        });
+
+    }
+
+    function del(oid) {
+        $.ajax({
+            url: "/Tools/jsonpack.ashx?action=delorder",
+            cache: false,
+            dataType: "json",
+            data: "&oid=" + oid,
+            success: function (data) {
+                if (data.result == "true") {
+                    alert('申请成功！');
+                    window.location = "addzyorder.html";
+                }
+                else {
+                    alert('申请失败！');
+                }
+            }
+        });
+
+    }
+
+</script>

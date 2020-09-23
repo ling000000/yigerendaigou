@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录-</title>
+    <meta name="viewport" content="width=1200" />
+    <script src="/static/templets/aigou/js/jquery-1.7.2.min.js"></script>
+    <link href="/static/templets/aigou/css/login2.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">.input_borderlogin
+        {
+            width: 255px;
+            height: 28px;
+            border-radius: 0px;
+        }
+        
+        /*Jin   2015、07、27 样式优化*/
+        .login-box
+        {
+            width: 100%;
+            height: 475px;
+            position: relative;
+        }
+        .login-banner
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .login-ps
+        {
+            position: absolute;
+            top: 57px;
+            left: 50%;
+            margin-left: 148px;
+            z-index: 2;
+            width: 308px;
+            height: 308px;
+            background: #fff;
+        }
+        .register-tips
+        {
+            font-size: 14px;
+            color: #3270BD;
+            font-weight: normal;
+            float: right;
+            background: url("/static/templets/aigou/images/icon_rgst.png") no-repeat left center;
+            padding-left: 20px;
+        }
+        .input_send
+        {
+            background: #3270BD;
+            border: 1px solid #3270BD;
+            font-family: "微软雅黑" , sans-serif;
+        }
+        .input_send:hover
+        {
+            background: #3270BD;
+        }
+        .login_right
+        {
+            padding: 25px 20px;
+        }
+        .small_main
+        {
+            width: 990px;
+        }
+        .icon-login-rgst
+        {
+            width: 130px;
+            height: 16px;
+            margin-top: 5px;
+            background: url("/static/templets/aigou/images/icon_login_rgst.png") no-repeat left center;
+            overflow: hidden;
+        }
+        .icon-login-rgst a
+        {
+            width: 16px;
+            height: 16px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="small_top small_main" style="height: 60px;">
+        <h1 ><font size="8" color="#6495ed" ><a href="{% url 'q:index' %}">新领域国际物流</a></font></h1>
+    </div>
+    <div class="login-box">
+        <div class="login-banner" id="box_adb_9" data-type="login" data-gtag="banner,0,登录页">
+            <div style="width: 100%; height: 100%; background: url('/static/templets/aigou/images/logo2.jpg') no-repeat;">
+            </div>
+        </div>
+        <div class="login_right login-ps">
+            <h1 style="color: #666; font-size: 24px; font-weight: normal; margin-bottom: 36px;">
+                会员登录<a href="{% url 'q:do_reg' %}" class="register-tips">立即注册</a></h1>
+            <!--        <form action="/site/login-->
+            <!--" method="post">-->
+            <div id="login_show_error" style="padding-left: 42px; margin-top: -24px; position: absolute;">
+                <!--显示错误-->
+            </div>
+            <form action="{% url 'q:login' %}" method="post">
+                {% csrf_token %}
+            <table width="100%">
+                <tr>
+                    <td style="padding-bottom: 20px;">
+                        <span style="font-size: 14px; color: #999;">用户名：</span>
+                        <label>
+                        <input type="text" id="username"
+                            value="{{ re.username }}" name="username" class="input_border input_borderlogin" />
+                        <input type="text" name="country" value="{{ login_error }}" disabled="disabled" style= "border:0px;background:none;" />
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span style="font-size: 14px; color: #999;">密码：</span>
+                        <label>
+                        <input type="password" id="password"
+                            name="password" class="input_border input_borderlogin" value="{{ re.password }}"/><span><br>
+                                <a style="padding-top: 6px; color: #ff503e;" href="" target="_blank" class="fr" tabindex="-1">
+                                </a></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <td>
+                        <label>
+                        <input type="checkbox" name="checkbox" id="checkbox" />
+                        下次自动登录
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 7px; padding-bottom: 30px">
+                        <input type="submit" name="button" id="submit" value="登   录"
+                            class="input_send" style="width: 310px; font-size: 20px; height: 40px" />
+                    </td>
+                </tr>
+            </table>
+            </form>
+            <div style="padding: 5px 0 10px 0px; display: none;">
+                <li class="dgrey_font">您还可以用以下方式登录：</li>
+                <li class="grey_font">
+                    <div class="icon-login-rgst">
+                        <a href="/static/connect/facebook.html" title="facebook"></a><a href="/static/connect/weibo.html" title="微博">
+                        </a><a href="/static/connect/qq.html" title="QQ"></a><a href="/static/connect/wechat.html" id="Jwechat_nnn"
+                            title="微信"></a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="footer">
+        <div class="foot_cop_login">
+            <p>
+               </p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    function DoSubmit() {
+        var email = $.trim($("#email").val());
+        var password = $("#password").val();
+        $.ajax({
+            url: "/Tools/jsonlogin.ashx",
+            data: { email: email, password: password },
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                if (data.result == "false") {
+                    if (data.errorcode == 1 || data.errorcode == 2 || data.errorcode == 3 || data.errorcode == 4 || data.errorcode == 5) {
+                        $("#login_show_error").html("账号密码错误!");
+                    } else if (data.errorcode == 6 || data.errorcode == 7) {
+                        art.dialog({
+                            id: 'testID',
+                            content: '帐号正在审批当中，请稍后登录！',
+                            lock: true,
+                            button: [
+                                            {
+                                                name: '关闭',
+                                                callback: function () {
+                                                    window.location = '/index.html';
+                                                }
+                                            }
+                                        ]
+                        });
+                    } else if (data.errorcode == 8) {
+                        art.dialog({
+                            id: 'testID',
+                            content: '你的账号需要验证邮箱才可以登陆！',
+                            lock: true,
+                            button: [
+                                {
+                                    name: '重新发送邮件',
+                                    callback: function () {
+                                        $.ajax({
+                                            url: "/Tools/jsonregister.ashx",
+                                            data: { action: "sendemail", key: data.ud },
+                                            type: "POST",
+                                            dataType: "json",
+                                            success: function (data) {
+                                                alert("已发送，请激活邮件！");
+                                            }
+                                        });
+
+                                    }
+
+                                },
+                                            {
+                                                name: '关闭',
+                                                callback: function () {
+                                                    window.location = '/index.html';
+                                                }
+                                            }
+                                        ]
+                        });
+
+                    }
+
+                }
+                else if (data.result == "true") {
+                    if (data.returnUrl == "") {
+                        window.location.href = "userindexs.html";
+                    }
+                    else {
+                        window.location.href = returnUrl;
+                    }
+                }
+            }
+        });
+    }
+</script>
+<script src="/static/templets/aigou/artdialog/artDialog-skin=blue.js"></script>
+<script src="/static/templets/aigou/artdialog/plugins/iframeTools-skin=blue.js"></script>
